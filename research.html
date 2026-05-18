@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — BNIRA Lab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#0d6e6e', light: '#0f8080', dark: '#094f4f', xdark: '#063535' },
+            accent:  { DEFAULT: '#d97706', light: '#f59e0b', dark: '#b45309' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-link { @apply text-slate-300 hover:text-accent transition-colors duration-200 font-medium text-sm; }
+    .nav-link.active { @apply text-accent; }
+    .card { @apply bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200; }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex flex-col leading-tight">
+          <span class="text-white font-bold text-xl tracking-wide">BNIRA Lab</span>
+          <span class="text-teal-300 text-xs font-medium">KUET · Biomedical Engineering</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html"        class="nav-link">Home</a>
+          <a href="research.html"     class="nav-link active">Research</a>
+          <a href="people.html"       class="nav-link">People</a>
+          <a href="publications.html" class="nav-link">Publications</a>
+          <a href="projects.html"     class="nav-link">Projects</a>
+          <a href="join.html"         class="nav-link">Join Us</a>
+          <a href="contact.html"      class="nav-link">Contact</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-white p-2 rounded-md hover:bg-primary-dark transition-colors">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-primary-dark border-t border-teal-700 px-4 pb-4 pt-2 space-y-1">
+      <a href="index.html"        class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Home</a>
+      <a href="research.html"     class="block py-2 text-white font-medium text-sm">Research</a>
+      <a href="people.html"       class="block py-2 text-slate-300 hover:text-white font-medium text-sm">People</a>
+      <a href="publications.html" class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Publications</a>
+      <a href="projects.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Projects</a>
+      <a href="join.html"         class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Join Us</a>
+      <a href="contact.html"      class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gradient-to-br from-primary-xdark to-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-teal-300 font-semibold uppercase tracking-widest text-sm mb-2">BNIRA Lab</p>
+      <h1 class="text-4xl font-extrabold text-white mb-3">Research</h1>
+      <p class="text-teal-200 max-w-2xl">Our research bridges neural engineering, signal processing, and artificial intelligence to address fundamental and translational challenges in biomedical science.</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 md:p-12">
+      <h2 class="text-2xl font-bold text-slate-800 mb-4">Research Philosophy</h2>
+      <p class="text-slate-600 leading-relaxed mb-4">
+        At BNIRA Lab, we believe that understanding the brain and nervous system through quantitative methods can yield transformative solutions for medicine. Our approach is inherently interdisciplinary, drawing from electrical engineering, computer science, physiology, and clinical medicine.
+      </p>
+      <p class="text-slate-600 leading-relaxed">
+        We pursue both <strong class="text-primary">fundamental research</strong> (how does the brain encode information?) and <strong class="text-accent-dark">applied research</strong> (how can we use that knowledge to build better assistive devices and diagnostics?). Student-led projects form the core of our lab's output.
+      </p>
+    </div>
+  </section>
+
+  <!-- RESEARCH AREAS -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <h2 class="text-3xl font-bold text-slate-800 mb-10">Research Areas</h2>
+
+    <!-- Area 1 -->
+    <div class="card mb-8 overflow-hidden">
+      <div class="border-l-4 border-primary p-6 md:p-8">
+        <div class="flex flex-wrap items-start gap-4 mb-4">
+          <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">🧠</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-800">Brain–Computer Interfaces (BCI)</h3>
+            <p class="text-primary font-medium text-sm mt-0.5">Neural Decoding · Assistive Technology · Rehabilitation</p>
+          </div>
+        </div>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          We develop non-invasive BCI systems based on EEG that allow users to control external devices through thought alone. Current projects focus on motor imagery classification, P300-based spellers, and SSVEP paradigms. We design end-to-end pipelines from signal acquisition through real-time classification.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Motor Imagery</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">P300</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">SSVEP</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Transformer</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Real-Time Classification</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Area 2 -->
+    <div class="card mb-8 overflow-hidden">
+      <div class="border-l-4 border-accent p-6 md:p-8">
+        <div class="flex flex-wrap items-start gap-4 mb-4">
+          <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">📈</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-800">Neural Signal Processing</h3>
+            <p class="text-accent-dark font-medium text-sm mt-0.5">EEG · EMG · ECG · Feature Extraction</p>
+          </div>
+        </div>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          High-quality signal processing is the foundation of all our downstream tasks. We investigate artifact removal, advanced filtering, time-frequency representations (STFT, wavelet, Hilbert-Huang), and feature extraction strategies for EEG, EMG, and ECG signals.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-amber-50 text-accent-dark text-xs px-3 py-1 rounded-full font-medium">Wavelet Transform</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-3 py-1 rounded-full font-medium">ICA</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-3 py-1 rounded-full font-medium">CSP</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-3 py-1 rounded-full font-medium">Artifact Rejection</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Area 3 -->
+    <div class="card mb-8 overflow-hidden">
+      <div class="border-l-4 border-primary p-6 md:p-8">
+        <div class="flex flex-wrap items-start gap-4 mb-4">
+          <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">🤖</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-800">Biomedical AI &amp; Machine Learning</h3>
+            <p class="text-primary font-medium text-sm mt-0.5">Deep Learning · Clinical AI · Diagnostic Systems</p>
+          </div>
+        </div>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          We apply and advance deep learning methods — CNNs, LSTMs, Transformers, and graph neural networks — for biomedical classification, anomaly detection, and prognostics. Special emphasis is placed on interpretability and robustness for clinical deployment.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">CNN</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">LSTM</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Explainable AI</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Transfer Learning</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Area 4 -->
+    <div class="card mb-8 overflow-hidden">
+      <div class="border-l-4 border-accent p-6 md:p-8">
+        <div class="flex flex-wrap items-start gap-4 mb-4">
+          <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">💊</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-800">Neurological Disorder Diagnosis</h3>
+            <p class="text-accent-dark font-medium text-sm mt-0.5">Epilepsy · Parkinson's · Mental Health · Biomarkers</p>
+          </div>
+        </div>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          We develop computational biomarkers and automated diagnostic tools for neurological and psychiatric conditions. Current focus areas include seizure detection from EEG, tremor quantification for Parkinson's disease, and EEG-based mental workload and stress assessment.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-amber-50 text-accent-dark text-xs px-3 py-1 rounded-full font-medium">Seizure Detection</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-3 py-1 rounded-full font-medium">Parkinson's</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-3 py-1 rounded-full font-medium">Mental Workload</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Area 5 -->
+    <div class="card overflow-hidden">
+      <div class="border-l-4 border-primary p-6 md:p-8">
+        <div class="flex flex-wrap items-start gap-4 mb-4">
+          <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">⌚</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-800">Wearable &amp; Embedded Biosensing</h3>
+            <p class="text-primary font-medium text-sm mt-0.5">IoT · Edge AI · Low-Power Design</p>
+          </div>
+        </div>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Translating lab-based algorithms to real-world hardware is a key priority. We design low-power wearable systems using microcontrollers and SoCs, implementing compressed AI models for on-device biosignal inference — enabling continuous, ambulatory health monitoring.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Arduino / STM32</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">TensorFlow Lite</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">BLE</span>
+          <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Model Quantization</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS & METHODS -->
+  <section class="bg-slate-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-slate-800 mb-8">Tools &amp; Methods</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white rounded-xl p-5 border border-slate-100">
+          <h4 class="font-semibold text-slate-800 mb-2">Hardware</h4>
+          <ul class="text-slate-500 text-sm space-y-1">
+            <li>OpenBCI Cyton/Ganglion</li>
+            <li>g.USBamp (EEG amplifier)</li>
+            <li>Shimmer3 (wearable EMG/ECG)</li>
+            <li>Custom PCB designs</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-slate-100">
+          <h4 class="font-semibold text-slate-800 mb-2">Software &amp; Frameworks</h4>
+          <ul class="text-slate-500 text-sm space-y-1">
+            <li>Python (MNE, scikit-learn)</li>
+            <li>PyTorch / TensorFlow</li>
+            <li>MATLAB (EEGLAB, BBCI)</li>
+            <li>LabStreamingLayer (LSL)</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-slate-100">
+          <h4 class="font-semibold text-slate-800 mb-2">Signal Processing</h4>
+          <ul class="text-slate-500 text-sm space-y-1">
+            <li>ICA, CSP, xDAWN</li>
+            <li>Wavelet / Hilbert-Huang</li>
+            <li>Frequency-band filtering</li>
+            <li>Graph signal processing</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-slate-100">
+          <h4 class="font-semibold text-slate-800 mb-2">AI / ML</h4>
+          <ul class="text-slate-500 text-sm space-y-1">
+            <li>Transformers / Attention</li>
+            <li>Convolutional networks</li>
+            <li>Domain adaptation</li>
+            <li>Federated learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATIONS -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl font-bold text-slate-800 mb-8">Collaborations</h2>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="card p-6 text-center">
+        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">DMC</div>
+        <h4 class="font-semibold text-slate-800">Dhaka Medical College</h4>
+        <p class="text-slate-500 text-sm mt-1">Clinical EEG dataset collection and neuro-diagnostic validation</p>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">IIT</div>
+        <h4 class="font-semibold text-slate-800">IIT Collaborators</h4>
+        <p class="text-slate-500 text-sm mt-1">Joint research on transfer learning for cross-subject BCI</p>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">INT</div>
+        <h4 class="font-semibold text-slate-800">International Partners</h4>
+        <p class="text-slate-500 text-sm mt-1">Collaborative publications and visiting researcher exchange programs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-xdark text-teal-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="text-white font-bold text-xl mb-1">BNIRA Lab</div>
+          <div class="text-teal-400 text-xs mb-4">Bio-Neural Intelligence &amp; Research Advancement</div>
+          <p class="text-sm leading-relaxed text-teal-300">Department of Biomedical Engineering<br />Khulna University of Engineering &amp; Technology (KUET)<br />Khulna-9203, Bangladesh</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="research.html"     class="hover:text-white transition-colors">Research</a></li>
+            <li><a href="people.html"       class="hover:text-white transition-colors">People</a></li>
+            <li><a href="publications.html" class="hover:text-white transition-colors">Publications</a></li>
+            <li><a href="projects.html"     class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="join.html"         class="hover:text-white transition-colors">Join Us</a></li>
+            <li><a href="contact.html"      class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li>bniralab@kuet.ac.bd</li>
+            <li>KUET, Khulna, Bangladesh</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-teal-800 mt-10 pt-6 text-center text-xs text-teal-500">&copy; 2026 BNIRA Lab, KUET. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden', !open);
+      iconClose.classList.toggle('hidden', open);
+    });
+  </script>
+</body>
+</html>

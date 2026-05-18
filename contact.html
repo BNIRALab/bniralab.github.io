@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — BNIRA Lab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#0d6e6e', light: '#0f8080', dark: '#094f4f', xdark: '#063535' },
+            accent:  { DEFAULT: '#d97706', light: '#f59e0b', dark: '#b45309' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-link { @apply text-slate-300 hover:text-accent transition-colors duration-200 font-medium text-sm; }
+    .nav-link.active { @apply text-accent; }
+    .input { @apply w-full border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all; }
+    label { @apply block text-sm font-medium text-slate-700 mb-1; }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex flex-col leading-tight">
+          <span class="text-white font-bold text-xl tracking-wide">BNIRA Lab</span>
+          <span class="text-teal-300 text-xs font-medium">KUET · Biomedical Engineering</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html"        class="nav-link">Home</a>
+          <a href="research.html"     class="nav-link">Research</a>
+          <a href="people.html"       class="nav-link">People</a>
+          <a href="publications.html" class="nav-link">Publications</a>
+          <a href="projects.html"     class="nav-link">Projects</a>
+          <a href="join.html"         class="nav-link">Join Us</a>
+          <a href="contact.html"      class="nav-link active">Contact</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-white p-2 rounded-md hover:bg-primary-dark transition-colors">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-primary-dark border-t border-teal-700 px-4 pb-4 pt-2 space-y-1">
+      <a href="index.html"        class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Home</a>
+      <a href="research.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Research</a>
+      <a href="people.html"       class="block py-2 text-slate-300 hover:text-white font-medium text-sm">People</a>
+      <a href="publications.html" class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Publications</a>
+      <a href="projects.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Projects</a>
+      <a href="join.html"         class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Join Us</a>
+      <a href="contact.html"      class="block py-2 text-white font-medium text-sm">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gradient-to-br from-primary-xdark to-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-teal-300 font-semibold uppercase tracking-widest text-sm mb-2">BNIRA Lab</p>
+      <h1 class="text-4xl font-extrabold text-white mb-3">Contact</h1>
+      <p class="text-teal-200 max-w-2xl">Reach out for collaboration, research inquiries, joining the lab, or any general questions.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid lg:grid-cols-2 gap-12">
+
+      <!-- Contact Form -->
+      <div>
+        <h2 class="text-2xl font-bold text-slate-800 mb-6">Send a Message</h2>
+        <form id="contact-form" class="space-y-5" novalidate>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="fname">First Name</label>
+              <input id="fname" name="fname" type="text" placeholder="John" class="input" required />
+            </div>
+            <div>
+              <label for="lname">Last Name</label>
+              <input id="lname" name="lname" type="text" placeholder="Doe" class="input" />
+            </div>
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" class="input" required />
+          </div>
+          <div>
+            <label for="affiliation">Affiliation</label>
+            <input id="affiliation" name="affiliation" type="text" placeholder="University / Institute / Industry" class="input" />
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" class="input bg-white">
+              <option value="">Select a subject...</option>
+              <option>Research Collaboration</option>
+              <option>Graduate Application (M.Sc./Ph.D.)</option>
+              <option>Undergraduate Thesis Inquiry</option>
+              <option>Visiting Researcher / Internship</option>
+              <option>Media / Press Inquiry</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." class="input resize-none" required></textarea>
+          </div>
+          <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+            Send Message
+          </button>
+          <p id="form-note" class="text-xs text-slate-400">
+            Note: This form is a static HTML prototype. To receive messages, connect it to a form backend (Formspree, Netlify Forms, etc.) or replace with a mailto link.
+          </p>
+        </form>
+      </div>
+
+      <!-- Contact Info + Map Placeholder -->
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800 mb-6">Lab Information</h2>
+          <div class="space-y-5">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 text-sm">Address</p>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                  BNIRA Lab, Department of Biomedical Engineering<br />
+                  Khulna University of Engineering &amp; Technology (KUET)<br />
+                  Khulna-9203, Bangladesh
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 text-sm">Email</p>
+                <p class="text-slate-500 text-sm">
+                  Lab: <a href="mailto:bniralab@kuet.ac.bd" class="text-primary hover:underline">bniralab@kuet.ac.bd</a><br />
+                  PI: <a href="mailto:amitduttaroy@kuet.ac.bd" class="text-primary hover:underline">amitduttaroy@kuet.ac.bd</a>
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 text-sm">Office Hours</p>
+                <p class="text-slate-500 text-sm">
+                  Sunday – Thursday: 9:00 AM – 5:00 PM (BST)<br />
+                  Appointments preferred. Walk-ins welcome.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PI Quick Contact -->
+        <div class="bg-primary-xdark rounded-2xl p-6 text-white">
+          <h3 class="font-bold text-lg mb-1">Dr. Amit Dutta Roy</h3>
+          <p class="text-teal-300 text-sm mb-4">Principal Investigator, BNIRA Lab</p>
+          <div class="space-y-2 text-sm text-teal-200">
+            <p><span class="font-medium text-white">Room:</span> BME Department, KUET</p>
+            <p><span class="font-medium text-white">Email:</span> amitduttaroy@kuet.ac.bd</p>
+          </div>
+          <div class="flex gap-3 mt-5">
+            <a href="#" class="bg-teal-600 hover:bg-teal-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors">Google Scholar</a>
+            <a href="#" class="bg-teal-600 hover:bg-teal-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors">ResearchGate</a>
+            <a href="#" class="bg-teal-600 hover:bg-teal-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors">ORCID</a>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="bg-slate-200 rounded-2xl overflow-hidden border border-slate-300" style="height: 220px;">
+          <div class="w-full h-full flex flex-col items-center justify-center text-slate-500 gap-2">
+            <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            <span class="text-sm font-medium">Map — KUET, Khulna, Bangladesh</span>
+            <a href="https://maps.google.com/?q=KUET+Khulna+Bangladesh" target="_blank" rel="noopener" class="text-primary text-xs hover:underline">Open in Google Maps →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-slate-100 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-slate-800 mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4" id="faq">
+
+        <details class="bg-white rounded-xl border border-slate-100 p-5 group">
+          <summary class="font-semibold text-slate-800 cursor-pointer flex justify-between items-center list-none">
+            Are you currently accepting graduate students?
+            <svg class="w-5 h-5 text-primary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="text-slate-500 text-sm mt-3 leading-relaxed">Yes, we are currently accepting applications for M.Sc. and Ph.D. students. Please review our <a href="join.html" class="text-primary hover:underline">Join Us page</a> for details and send your application to Dr. Roy.</p>
+        </details>
+
+        <details class="bg-white rounded-xl border border-slate-100 p-5 group">
+          <summary class="font-semibold text-slate-800 cursor-pointer flex justify-between items-center list-none">
+            Can students from other universities join the lab?
+            <svg class="w-5 h-5 text-primary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="text-slate-500 text-sm mt-3 leading-relaxed">Yes. We welcome visiting researchers and interns from other institutions on a rolling basis. Remote collaboration is also possible for specific projects. Please reach out with your background and areas of interest.</p>
+        </details>
+
+        <details class="bg-white rounded-xl border border-slate-100 p-5 group">
+          <summary class="font-semibold text-slate-800 cursor-pointer flex justify-between items-center list-none">
+            Do you collaborate with industry or clinical partners?
+            <svg class="w-5 h-5 text-primary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="text-slate-500 text-sm mt-3 leading-relaxed">Absolutely. We actively seek clinical collaborations for dataset collection and validation, and are open to industry partnerships for translational research and product development. Please email us to discuss potential collaborations.</p>
+        </details>
+
+        <details class="bg-white rounded-xl border border-slate-100 p-5 group">
+          <summary class="font-semibold text-slate-800 cursor-pointer flex justify-between items-center list-none">
+            How quickly should I expect a reply?
+            <svg class="w-5 h-5 text-primary flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="text-slate-500 text-sm mt-3 leading-relaxed">We aim to respond to all inquiries within 3–5 business days. For graduate applications, shortlisted candidates will be contacted within 2–3 weeks of submission.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-xdark text-teal-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="text-white font-bold text-xl mb-1">BNIRA Lab</div>
+          <div class="text-teal-400 text-xs mb-4">Bio-Neural Intelligence &amp; Research Advancement</div>
+          <p class="text-sm leading-relaxed text-teal-300">Department of Biomedical Engineering<br />Khulna University of Engineering &amp; Technology (KUET)<br />Khulna-9203, Bangladesh</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="research.html"     class="hover:text-white transition-colors">Research</a></li>
+            <li><a href="people.html"       class="hover:text-white transition-colors">People</a></li>
+            <li><a href="publications.html" class="hover:text-white transition-colors">Publications</a></li>
+            <li><a href="projects.html"     class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="join.html"         class="hover:text-white transition-colors">Join Us</a></li>
+            <li><a href="contact.html"      class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-2 text-sm"><li>bniralab@kuet.ac.bd</li><li>KUET, Khulna, Bangladesh</li></ul>
+        </div>
+      </div>
+      <div class="border-t border-teal-800 mt-10 pt-6 text-center text-xs text-teal-500">&copy; 2026 BNIRA Lab, KUET. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden', !open);
+      iconClose.classList.toggle('hidden', open);
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const note = document.getElementById('form-note');
+      note.textContent = 'Form submission noted. Connect to Formspree or a backend to enable real sending.';
+      note.classList.add('text-accent-dark', 'font-medium');
+    });
+  </script>
+</body>
+</html>

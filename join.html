@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Us — BNIRA Lab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#0d6e6e', light: '#0f8080', dark: '#094f4f', xdark: '#063535' },
+            accent:  { DEFAULT: '#d97706', light: '#f59e0b', dark: '#b45309' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-link { @apply text-slate-300 hover:text-accent transition-colors duration-200 font-medium text-sm; }
+    .nav-link.active { @apply text-accent; }
+    .card { @apply bg-white rounded-xl shadow-sm border border-slate-100; }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex flex-col leading-tight">
+          <span class="text-white font-bold text-xl tracking-wide">BNIRA Lab</span>
+          <span class="text-teal-300 text-xs font-medium">KUET · Biomedical Engineering</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html"        class="nav-link">Home</a>
+          <a href="research.html"     class="nav-link">Research</a>
+          <a href="people.html"       class="nav-link">People</a>
+          <a href="publications.html" class="nav-link">Publications</a>
+          <a href="projects.html"     class="nav-link">Projects</a>
+          <a href="join.html"         class="nav-link active">Join Us</a>
+          <a href="contact.html"      class="nav-link">Contact</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-white p-2 rounded-md hover:bg-primary-dark transition-colors">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-primary-dark border-t border-teal-700 px-4 pb-4 pt-2 space-y-1">
+      <a href="index.html"        class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Home</a>
+      <a href="research.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Research</a>
+      <a href="people.html"       class="block py-2 text-slate-300 hover:text-white font-medium text-sm">People</a>
+      <a href="publications.html" class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Publications</a>
+      <a href="projects.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Projects</a>
+      <a href="join.html"         class="block py-2 text-white font-medium text-sm">Join Us</a>
+      <a href="contact.html"      class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gradient-to-br from-primary-xdark to-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-teal-300 font-semibold uppercase tracking-widest text-sm mb-2">BNIRA Lab</p>
+      <h1 class="text-4xl font-extrabold text-white mb-3">Join Us</h1>
+      <p class="text-teal-200 max-w-2xl">We are looking for passionate, motivated individuals to join our team and push the boundaries of neural engineering and biomedical AI.</p>
+    </div>
+  </section>
+
+  <!-- WHY JOIN -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-3 gap-6 mb-14">
+      <div class="text-center p-6">
+        <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3 class="font-bold text-slate-800 text-lg mb-2">Cutting-Edge Research</h3>
+        <p class="text-slate-500 text-sm">Work on problems at the frontier of neuroscience, AI, and biomedical engineering with real clinical impact.</p>
+      </div>
+      <div class="text-center p-6">
+        <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-accent-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="font-bold text-slate-800 text-lg mb-2">Collaborative Environment</h3>
+        <p class="text-slate-500 text-sm">Collaborative lab culture with mentorship, regular group meetings, and active participation in international conferences.</p>
+      </div>
+      <div class="text-center p-6">
+        <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="font-bold text-slate-800 text-lg mb-2">Career Development</h3>
+        <p class="text-slate-500 text-sm">Strong publication record, industry connections, and support for higher studies and international opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN POSITIONS -->
+  <section class="bg-slate-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-slate-800 mb-10">Open Positions</h2>
+
+      <!-- PhD -->
+      <div class="card mb-6 overflow-hidden">
+        <div class="border-l-4 border-accent p-6 md:p-8">
+          <div class="flex flex-wrap justify-between items-start gap-3 mb-3">
+            <div>
+              <span class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">Ph.D.</span>
+              <h3 class="text-xl font-bold text-slate-800 mt-2">Ph.D. Student — Neural Decoding &amp; BCI</h3>
+            </div>
+            <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full self-start">Open</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            We are seeking a highly motivated Ph.D. student to work on transformer-based neural decoding and brain–computer interfaces. The project involves developing novel EEG analysis pipelines and deploying them in real-time rehabilitation applications.
+          </p>
+          <div class="mb-4">
+            <p class="text-sm font-semibold text-slate-700 mb-2">Requirements:</p>
+            <ul class="text-slate-500 text-sm space-y-1 list-disc list-inside">
+              <li>B.Sc./M.Sc. in Biomedical Engineering, EEE, CSE, or related field</li>
+              <li>Strong background in signal processing and machine learning</li>
+              <li>Proficiency in Python (NumPy, PyTorch or TensorFlow)</li>
+              <li>Prior research experience or publications are a plus</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="inline-block bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- MSc -->
+      <div class="card mb-6 overflow-hidden">
+        <div class="border-l-4 border-primary p-6 md:p-8">
+          <div class="flex flex-wrap justify-between items-start gap-3 mb-3">
+            <div>
+              <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">M.Sc.</span>
+              <h3 class="text-xl font-bold text-slate-800 mt-2">M.Sc. Student — Wearable Biomedical Devices</h3>
+            </div>
+            <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full self-start">Open</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Looking for an M.Sc. student to work on low-power wearable biosensor design and embedded AI. The project involves designing a custom PCB, implementing an ECG/EEG acquisition system, and deploying quantized deep learning models for on-device inference.
+          </p>
+          <div class="mb-4">
+            <p class="text-sm font-semibold text-slate-700 mb-2">Requirements:</p>
+            <ul class="text-slate-500 text-sm space-y-1 list-disc list-inside">
+              <li>B.Sc. in Biomedical Engineering, EEE, or CSE</li>
+              <li>Experience with microcontrollers (Arduino, STM32) or embedded systems</li>
+              <li>Interest in analog electronics and PCB design (KiCad/Altium) is a plus</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="inline-block bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- BSc Thesis -->
+      <div class="card mb-6 overflow-hidden">
+        <div class="border-l-4 border-teal-400 p-6 md:p-8">
+          <div class="flex flex-wrap justify-between items-start gap-3 mb-3">
+            <div>
+              <span class="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full">B.Sc. Thesis</span>
+              <h3 class="text-xl font-bold text-slate-800 mt-2">Undergraduate Thesis Students — Multiple Positions</h3>
+            </div>
+            <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full self-start">Open</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            We have multiple undergraduate thesis positions available for KUET BME students. Projects include seizure detection, emotion recognition from EEG, EMG-based prosthetics control, and wearable device development. Strong guidance and publication opportunities are provided.
+          </p>
+          <div class="mb-4">
+            <p class="text-sm font-semibold text-slate-700 mb-2">Requirements:</p>
+            <ul class="text-slate-500 text-sm space-y-1 list-disc list-inside">
+              <li>KUET BME 3rd or 4th year student</li>
+              <li>Curious, self-motivated, and willing to learn</li>
+              <li>Basic MATLAB or Python knowledge</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="inline-block bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Express Interest</a>
+        </div>
+      </div>
+
+      <!-- Visiting / Internship -->
+      <div class="card overflow-hidden">
+        <div class="border-l-4 border-slate-400 p-6 md:p-8">
+          <div class="flex flex-wrap justify-between items-start gap-3 mb-3">
+            <div>
+              <span class="bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full">Visiting / Intern</span>
+              <h3 class="text-xl font-bold text-slate-800 mt-2">Visiting Researcher or Research Intern</h3>
+            </div>
+            <span class="bg-yellow-100 text-yellow-700 text-xs font-bold px-3 py-1 rounded-full self-start">Rolling</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            We welcome short-term visiting researchers (3–6 months) and research interns from other institutions or industry. Interests in EEG/BCI, biomedical AI, or embedded sensing are preferred.
+          </p>
+          <a href="contact.html" class="inline-block bg-slate-600 hover:bg-slate-700 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Get in Touch</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW TO APPLY -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl font-bold text-slate-800 mb-8">How to Apply</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          To apply for any position at BNIRA Lab, please send an email to <a href="mailto:amitduttaroy@kuet.ac.bd" class="text-primary font-semibold hover:underline">amitduttaroy@kuet.ac.bd</a> with the subject line: <strong>"[Position Type] Application — [Your Name]"</strong>.
+        </p>
+        <div class="space-y-4">
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+            <div>
+              <h4 class="font-semibold text-slate-800">Prepare your documents</h4>
+              <p class="text-slate-500 text-sm">CV/Resume, transcripts, brief statement of purpose (1 page), and contact info for 2 references.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+            <div>
+              <h4 class="font-semibold text-slate-800">Send your email</h4>
+              <p class="text-slate-500 text-sm">Include the subject line format above and attach all documents as a single PDF.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+            <div>
+              <h4 class="font-semibold text-slate-800">Initial screening</h4>
+              <p class="text-slate-500 text-sm">We will review applications on a rolling basis. Shortlisted candidates will be contacted for an interview within 2–3 weeks.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</div>
+            <div>
+              <h4 class="font-semibold text-slate-800">Decision</h4>
+              <p class="text-slate-500 text-sm">Successful candidates will receive an offer and onboarding details to join the lab.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-teal-50 rounded-2xl p-8 border border-teal-100">
+        <h3 class="font-bold text-slate-800 text-lg mb-4">What makes a strong application?</h3>
+        <ul class="space-y-3 text-slate-600 text-sm">
+          <li class="flex gap-2"><span class="text-primary font-bold">✓</span> A clear, focused statement of purpose that matches our research areas</li>
+          <li class="flex gap-2"><span class="text-primary font-bold">✓</span> Evidence of prior research, projects, or relevant coursework</li>
+          <li class="flex gap-2"><span class="text-primary font-bold">✓</span> Strong academic record (especially in signals, math, and programming)</li>
+          <li class="flex gap-2"><span class="text-primary font-bold">✓</span> Any publications, preprints, or GitHub projects you have contributed to</li>
+          <li class="flex gap-2"><span class="text-primary font-bold">✓</span> Demonstrated curiosity and self-motivation</li>
+        </ul>
+        <div class="mt-6 pt-6 border-t border-teal-200">
+          <p class="text-slate-500 text-xs">Questions? Visit our <a href="contact.html" class="text-primary font-semibold hover:underline">contact page</a> or email us directly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-xdark text-teal-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="text-white font-bold text-xl mb-1">BNIRA Lab</div>
+          <div class="text-teal-400 text-xs mb-4">Bio-Neural Intelligence &amp; Research Advancement</div>
+          <p class="text-sm leading-relaxed text-teal-300">Department of Biomedical Engineering<br />Khulna University of Engineering &amp; Technology (KUET)<br />Khulna-9203, Bangladesh</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="research.html"     class="hover:text-white transition-colors">Research</a></li>
+            <li><a href="people.html"       class="hover:text-white transition-colors">People</a></li>
+            <li><a href="publications.html" class="hover:text-white transition-colors">Publications</a></li>
+            <li><a href="projects.html"     class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="join.html"         class="hover:text-white transition-colors">Join Us</a></li>
+            <li><a href="contact.html"      class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-2 text-sm"><li>bniralab@kuet.ac.bd</li><li>KUET, Khulna, Bangladesh</li></ul>
+        </div>
+      </div>
+      <div class="border-t border-teal-800 mt-10 pt-6 text-center text-xs text-teal-500">&copy; 2026 BNIRA Lab, KUET. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden', !open);
+      iconClose.classList.toggle('hidden', open);
+    });
+  </script>
+</body>
+</html>

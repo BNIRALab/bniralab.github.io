@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — BNIRA Lab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#0d6e6e', light: '#0f8080', dark: '#094f4f', xdark: '#063535' },
+            accent:  { DEFAULT: '#d97706', light: '#f59e0b', dark: '#b45309' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-link { @apply text-slate-300 hover:text-accent transition-colors duration-200 font-medium text-sm; }
+    .nav-link.active { @apply text-accent; }
+    .card { @apply bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-200; }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex flex-col leading-tight">
+          <span class="text-white font-bold text-xl tracking-wide">BNIRA Lab</span>
+          <span class="text-teal-300 text-xs font-medium">KUET · Biomedical Engineering</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html"        class="nav-link">Home</a>
+          <a href="research.html"     class="nav-link">Research</a>
+          <a href="people.html"       class="nav-link">People</a>
+          <a href="publications.html" class="nav-link">Publications</a>
+          <a href="projects.html"     class="nav-link active">Projects</a>
+          <a href="join.html"         class="nav-link">Join Us</a>
+          <a href="contact.html"      class="nav-link">Contact</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-white p-2 rounded-md hover:bg-primary-dark transition-colors">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-primary-dark border-t border-teal-700 px-4 pb-4 pt-2 space-y-1">
+      <a href="index.html"        class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Home</a>
+      <a href="research.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Research</a>
+      <a href="people.html"       class="block py-2 text-slate-300 hover:text-white font-medium text-sm">People</a>
+      <a href="publications.html" class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Publications</a>
+      <a href="projects.html"     class="block py-2 text-white font-medium text-sm">Projects</a>
+      <a href="join.html"         class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Join Us</a>
+      <a href="contact.html"      class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-gradient-to-br from-primary-xdark to-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-teal-300 font-semibold uppercase tracking-widest text-sm mb-2">BNIRA Lab</p>
+      <h1 class="text-4xl font-extrabold text-white mb-3">Projects</h1>
+      <p class="text-teal-200 max-w-2xl">Funded research projects, thesis work, and open-source tools developed at BNIRA Lab.</p>
+    </div>
+  </section>
+
+  <!-- ACTIVE PROJECTS -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="flex items-center gap-3 mb-8">
+      <h2 class="text-2xl font-bold text-slate-800">Active Projects</h2>
+      <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">5 Ongoing</span>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Project 1 -->
+      <div class="card p-6">
+        <div class="flex items-start justify-between mb-3">
+          <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Active</span>
+          <span class="text-slate-400 text-xs">2025 – Present</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 mb-2">NeuroAssist: Real-Time Motor Imagery BCI for Stroke Rehabilitation</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-4">
+          Development of a low-latency, portable BCI platform using EEG for stroke patients undergoing upper-limb rehabilitation. Combines transformer-based neural decoding with robotic orthosis control.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">EEG</span>
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Motor Imagery</span>
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Rehabilitation</span>
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Robotics</span>
+        </div>
+        <div class="border-t border-slate-100 pt-3 text-xs text-slate-500">
+          <span class="font-medium text-slate-700">Funded by:</span> KUET Research Cell (Grant #BME-2025-01)
+          &nbsp;·&nbsp; <span class="font-medium text-slate-700">Team:</span> Dr. Roy, R. Sarker
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="card p-6">
+        <div class="flex items-start justify-between mb-3">
+          <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Active</span>
+          <span class="text-slate-400 text-xs">2024 – Present</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 mb-2">CardioEdge: Wearable ECG Monitor with On-Device AI Arrhythmia Detection</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-4">
+          Design and fabrication of a low-power wearable single-lead ECG patch with embedded TensorFlow Lite model for continuous, real-time cardiac arrhythmia classification without cloud dependence.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">ECG</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">Wearable</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">STM32</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">TFLite</span>
+        </div>
+        <div class="border-t border-slate-100 pt-3 text-xs text-slate-500">
+          <span class="font-medium text-slate-700">Funded by:</span> Self-funded (prototype stage)
+          &nbsp;·&nbsp; <span class="font-medium text-slate-700">Team:</span> Dr. Roy, N. Kabir, R. Khan
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="card p-6">
+        <div class="flex items-start justify-between mb-3">
+          <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Active</span>
+          <span class="text-slate-400 text-xs">2024 – Present</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 mb-2">ParkiNet: Early Parkinson's Disease Biomarker Extraction from Tremor &amp; Gait</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-4">
+          Multi-modal analysis combining accelerometer, EMG, and EEG data to extract clinically validated biomarkers for Parkinson's disease severity staging using graph neural networks and domain adaptation.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Parkinson's</span>
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">EMG</span>
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">GNN</span>
+        </div>
+        <div class="border-t border-slate-100 pt-3 text-xs text-slate-500">
+          <span class="font-medium text-slate-700">Funded by:</span> UGC Research Grant (in progress)
+          &nbsp;·&nbsp; <span class="font-medium text-slate-700">Team:</span> Dr. Roy, M. Hasan
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="card p-6">
+        <div class="flex items-start justify-between mb-3">
+          <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Active</span>
+          <span class="text-slate-400 text-xs">2025 – Present</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 mb-2">SeizureGuard: Automatic Epileptic Seizure Detection from Ambulatory EEG</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-4">
+          Collaboration with Dhaka Medical College to develop and clinically validate a deep learning model for automated seizure detection from ambulatory EEG recordings, with a focus on pediatric epilepsy.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">Epilepsy</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">Clinical EEG</span>
+          <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">Pediatric</span>
+        </div>
+        <div class="border-t border-slate-100 pt-3 text-xs text-slate-500">
+          <span class="font-medium text-slate-700">Collaboration:</span> Dhaka Medical College
+          &nbsp;·&nbsp; <span class="font-medium text-slate-700">Team:</span> Dr. Roy, F. Akter
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="card p-6 md:col-span-2">
+        <div class="flex items-start justify-between mb-3">
+          <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Active</span>
+          <span class="text-slate-400 text-xs">2026 – Present</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-800 mb-2">MindTrack: Cognitive Load Monitoring System for Students Using Passive EEG</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-4">
+          A non-intrusive EEG-based system to monitor cognitive load and mental fatigue in students during academic tasks. Aims to provide real-time feedback to educators and learners to optimize learning sessions. Target deployment in KUET's smart classroom initiative.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Cognitive Load</span>
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Passive BCI</span>
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Education Tech</span>
+          <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">EEG</span>
+        </div>
+        <div class="border-t border-slate-100 pt-3 text-xs text-slate-500">
+          <span class="font-medium text-slate-700">Funded by:</span> KUET Smart Campus Initiative
+          &nbsp;·&nbsp; <span class="font-medium text-slate-700">Team:</span> Dr. Roy, S. Islam, R. Khan
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPLETED PROJECTS -->
+  <section class="bg-slate-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-8">
+        <h2 class="text-2xl font-bold text-slate-800">Completed Projects</h2>
+        <span class="bg-slate-200 text-slate-600 text-xs font-bold px-3 py-1 rounded-full">3 Completed</span>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <span class="bg-slate-100 text-slate-500 text-xs font-bold px-2 py-1 rounded">Completed 2024</span>
+          <h4 class="font-bold text-slate-800 mt-3 mb-2">P300 BCI Speller with Adaptive Baseline Correction</h4>
+          <p class="text-slate-500 text-sm">A real-time P300-based character-spelling BCI system with adaptive artifact correction, achieving &gt;85% ITR improvement over baseline. Formed the basis of S. Rahman's M.Sc. thesis.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <span class="bg-slate-100 text-slate-500 text-xs font-bold px-2 py-1 rounded">Completed 2024</span>
+          <h4 class="font-bold text-slate-800 mt-3 mb-2">Low-Cost PPG-Based HRV Monitor</h4>
+          <p class="text-slate-500 text-sm">Open-source, battery-powered photoplethysmography device for heart rate variability analysis. Validated against clinical Holter monitors in a 30-participant study.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <span class="bg-slate-100 text-slate-500 text-xs font-bold px-2 py-1 rounded">Completed 2023</span>
+          <h4 class="font-bold text-slate-800 mt-3 mb-2">EEG-Based Fatigue Detection for Drivers</h4>
+          <p class="text-slate-500 text-sm">SVM classifier on theta/alpha band power ratios to detect drowsiness in real time, demonstrated with a simulated driving dataset and custom EEG headband prototype.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN SOURCE -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-2xl font-bold text-slate-800 mb-6">Open-Source Tools</h2>
+    <div class="grid sm:grid-cols-2 gap-5">
+
+      <div class="card p-5 flex gap-4 items-start">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-800">BNIRATool — EEG Processing Pipeline</h4>
+          <p class="text-slate-500 text-sm mt-1">Python toolkit for preprocessing, feature extraction, and classification of EEG/EMG data. Built on MNE-Python.</p>
+          <a href="#" class="mt-2 inline-block text-primary text-xs font-semibold hover:underline">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card p-5 flex gap-4 items-start">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-800">CardioEdge Firmware — Open ECG Platform</h4>
+          <p class="text-slate-500 text-sm mt-1">STM32-based firmware for single-lead ECG acquisition with BLE streaming and on-device inference. KiCad schematics included.</p>
+          <a href="#" class="mt-2 inline-block text-primary text-xs font-semibold hover:underline">View on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-xdark text-teal-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="text-white font-bold text-xl mb-1">BNIRA Lab</div>
+          <div class="text-teal-400 text-xs mb-4">Bio-Neural Intelligence &amp; Research Advancement</div>
+          <p class="text-sm leading-relaxed text-teal-300">Department of Biomedical Engineering<br />Khulna University of Engineering &amp; Technology (KUET)<br />Khulna-9203, Bangladesh</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="research.html"     class="hover:text-white transition-colors">Research</a></li>
+            <li><a href="people.html"       class="hover:text-white transition-colors">People</a></li>
+            <li><a href="publications.html" class="hover:text-white transition-colors">Publications</a></li>
+            <li><a href="projects.html"     class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="join.html"         class="hover:text-white transition-colors">Join Us</a></li>
+            <li><a href="contact.html"      class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-2 text-sm"><li>bniralab@kuet.ac.bd</li><li>KUET, Khulna, Bangladesh</li></ul>
+        </div>
+      </div>
+      <div class="border-t border-teal-800 mt-10 pt-6 text-center text-xs text-teal-500">&copy; 2026 BNIRA Lab, KUET. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden', !open);
+      iconClose.classList.toggle('hidden', open);
+    });
+  </script>
+</body>
+</html>
