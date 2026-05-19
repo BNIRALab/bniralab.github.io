@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(Select-String -Path \"D:\\\\2_Projects_and_Codes_Github\\\\Github Portfolio\\\\bniralab.github.io\\\\research.html\" -Pattern \"<footer\" -List)",
+      "Bash(Select-Object -ExpandProperty LineNumber)"
+    ]
+  }
+}
