@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="shortcut icon" href="assets/favicon.svg">
   <title>BNIRA Lab — Bio-Neural Intelligence & Research Advancement</title>
   <meta name="description" content="Bio-Neural Intelligence and Research Advancement Lab at KUET, led by Dr. Amit Dutta Roy." />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,41 +38,24 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased">
 
-  <!-- ===== NAVBAR ===== -->
-  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg">
+  <!-- NAVBAR -->
+  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg overflow-x-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Brand -->
-        <a href="index.html" class="flex flex-col leading-tight">
+      <div class="flex items-center justify-between h-16" style="min-width: 720px;">
+        <a href="index.html" class="flex flex-col leading-tight flex-shrink-0">
           <span class="text-white font-bold text-xl tracking-wide">BNIRA Lab</span>
           <span class="text-teal-300 text-xs font-medium">KUET · Biomedical Engineering</span>
         </a>
-        <!-- Desktop nav -->
-        <div class="hidden md:flex items-center gap-6">
-          <a href="index.html"        class="nav-link active">Home</a>
-          <a href="research.html"     class="nav-link">Research</a>
-          <a href="people.html"       class="nav-link">People</a>
-          <a href="publications.html" class="nav-link">Publications</a>
-          <a href="projects.html"     class="nav-link">Projects</a>
-          <a href="join.html"         class="nav-link">Join Us</a>
-          <a href="contact.html"      class="nav-link">Contact</a>
+        <div class="flex items-center gap-6">
+          <a href="index.html"        class="nav-link whitespace-nowrap active">Home</a>
+          <a href="research.html"     class="nav-link whitespace-nowrap">Research</a>
+          <a href="people.html"       class="nav-link whitespace-nowrap">People</a>
+          <a href="publications.html" class="nav-link whitespace-nowrap">Publications</a>
+          <a href="projects.html"     class="nav-link whitespace-nowrap">Projects</a>
+          <a href="join.html"         class="nav-link whitespace-nowrap">Join Us</a>
+          <a href="contact.html"      class="nav-link whitespace-nowrap">Contact</a>
         </div>
-        <!-- Mobile hamburger -->
-        <button id="menu-btn" class="md:hidden text-white p-2 rounded-md hover:bg-primary-dark transition-colors" aria-label="Toggle menu">
-          <svg id="icon-open"  class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
       </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-primary-dark border-t border-teal-700 px-4 pb-4 pt-2 space-y-1">
-      <a href="index.html"        class="block py-2 text-white font-medium text-sm">Home</a>
-      <a href="research.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Research</a>
-      <a href="people.html"       class="block py-2 text-slate-300 hover:text-white font-medium text-sm">People</a>
-      <a href="publications.html" class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Publications</a>
-      <a href="projects.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Projects</a>
-      <a href="join.html"         class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Join Us</a>
-      <a href="contact.html"      class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Contact</a>
     </div>
   </nav>
 
@@ -267,7 +252,21 @@
           <p class="text-teal-200 leading-relaxed max-w-2xl">
             Dr. Roy's research focuses on neural signal processing, brain–computer interfaces, and the application of deep learning in clinical neuroscience. He has published in IEEE, Elsevier, and Springer venues and supervises graduate and undergraduate thesis students at BNIRA Lab.
           </p>
-          <div class="flex gap-3 mt-5">
+          <div class="flex gap-4 mt-4">
+            <a href="https://scholar.google.com/citations?user=ZpUq_acAAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener" class="text-teal-300 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg>
+            </a>
+            <a href="https://www.researchgate.net/profile/Amit-Roy-38" title="ResearchGate" target="_blank" rel="noopener" class="text-teal-300 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </a>
+            <a href="https://bd.linkedin.com/in/amitduttaroy" title="LinkedIn" target="_blank" rel="noopener" class="text-teal-300 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:amit@bme.kuet.ac.bd" title="Email" class="text-teal-300 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+          </div>
+          <div class="flex gap-3 mt-4">
             <a href="people.html" class="bg-white text-primary font-semibold text-sm px-5 py-2 rounded-lg hover:bg-teal-50 transition-colors">Full Profile</a>
             <a href="contact.html" class="border border-teal-400 text-teal-200 font-semibold text-sm px-5 py-2 rounded-lg hover:bg-teal-800 transition-colors">Contact</a>
           </div>
@@ -288,14 +287,13 @@
     <div class="space-y-4">
       <div class="card p-5">
         <div class="flex items-start gap-3">
-          <span class="flex-shrink-0 bg-primary text-white text-xs font-bold px-2 py-1 rounded">2026</span>
+          <span class="flex-shrink-0 bg-primary text-white text-xs font-bold px-2 py-1 rounded">2025</span>
           <div>
-            <h4 class="font-semibold text-slate-800">Transformer-Based EEG Motor Imagery Decoding with Channel Attention</h4>
-            <p class="text-slate-500 text-sm mt-1">A. Dutta Roy, et al. — <em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em></p>
+            <h4 class="font-semibold text-slate-800">A virtual approach: Systematic review and meta-analysis of virtual reality-based therapies for convergence insufficiency</h4>
+            <p class="text-slate-500 text-sm mt-1">T. Islam, A. Dutta Roy — <em>2025</em></p>
             <div class="flex gap-2 mt-2">
-              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">BCI</span>
-              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">EEG</span>
-              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Deep Learning</span>
+              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Journal</span>
+              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">VR</span>
             </div>
           </div>
         </div>
@@ -304,24 +302,25 @@
         <div class="flex items-start gap-3">
           <span class="flex-shrink-0 bg-primary text-white text-xs font-bold px-2 py-1 rounded">2025</span>
           <div>
-            <h4 class="font-semibold text-slate-800">Lightweight CNN-LSTM Architecture for Real-Time Arrhythmia Classification on Edge Devices</h4>
-            <p class="text-slate-500 text-sm mt-1">A. Dutta Roy, et al. — <em>Biomedical Signal Processing and Control, Elsevier</em></p>
+            <h4 class="font-semibold text-slate-800">Dia-Tracker: A Multimodal Diabetes Assistance Device</h4>
+            <p class="text-slate-500 text-sm mt-1">S. Khan, M. B. Mostofa, A. Joye, A. Dutta Roy — <em>Conference Paper, July 2025</em></p>
             <div class="flex gap-2 mt-2">
-              <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">ECG</span>
-              <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">Edge AI</span>
+              <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">Conference</span>
+              <span class="bg-amber-50 text-accent-dark text-xs px-2 py-0.5 rounded font-medium">Diabetes</span>
             </div>
           </div>
         </div>
       </div>
       <div class="card p-5">
         <div class="flex items-start gap-3">
-          <span class="flex-shrink-0 bg-slate-400 text-white text-xs font-bold px-2 py-1 rounded">2025</span>
+          <span class="flex-shrink-0 bg-slate-600 text-white text-xs font-bold px-2 py-1 rounded">2024</span>
           <div>
-            <h4 class="font-semibold text-slate-800">EMG-Based Gesture Recognition Using Wavelet Scattering and SVM for Prosthetic Hand Control</h4>
-            <p class="text-slate-500 text-sm mt-1">A. Dutta Roy, et al. — <em>Journal of Neural Engineering, IOP Publishing</em></p>
+            <h4 class="font-semibold text-slate-800">Performance investigation of epilepsy detection from noisy EEG signals using base-2-meta stacking classifier</h4>
+            <p class="text-slate-500 text-sm mt-1">T. Islam, R. Islam, M. Basak, A. Dutta Roy, et al. — <em>Scientific Reports, Nature Portfolio</em></p>
             <div class="flex gap-2 mt-2">
-              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">EMG</span>
-              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Prosthetics</span>
+              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Journal</span>
+              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">EEG</span>
+              <span class="bg-teal-50 text-primary text-xs px-2 py-0.5 rounded font-medium">Epilepsy</span>
             </div>
           </div>
         </div>
@@ -341,60 +340,24 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="bg-primary-xdark text-teal-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="md:col-span-2">
-          <div class="text-white font-bold text-xl mb-1">BNIRA Lab</div>
-          <div class="text-teal-400 text-xs mb-4">Bio-Neural Intelligence &amp; Research Advancement</div>
-          <p class="text-sm leading-relaxed text-teal-300">
-            Department of Biomedical Engineering<br />
-            Khulna University of Engineering &amp; Technology (KUET)<br />
-            Khulna-9203, Bangladesh
-          </p>
-        </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Navigation</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="research.html"     class="hover:text-white transition-colors">Research</a></li>
-            <li><a href="people.html"       class="hover:text-white transition-colors">People</a></li>
-            <li><a href="publications.html" class="hover:text-white transition-colors">Publications</a></li>
-            <li><a href="projects.html"     class="hover:text-white transition-colors">Projects</a></li>
-            <li><a href="join.html"         class="hover:text-white transition-colors">Join Us</a></li>
-            <li><a href="contact.html"      class="hover:text-white transition-colors">Contact</a></li>
-          </ul>
+          <div class="text-white font-bold text-lg mb-1">BNIRA Lab</div>
+          <div class="text-teal-400 text-xs mb-2">Bio-Neural Intelligence &amp; Research Advancement</div>
+          <p class="text-sm text-teal-300">Department of Biomedical Engineering, KUET · Khulna-9203, Bangladesh</p>
         </div>
-        <div>
-          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Contact</h4>
-          <ul class="space-y-2 text-sm">
-            <li class="flex gap-2 items-start">
-              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <span>bniralab@kuet.ac.bd</span>
-            </li>
-            <li class="flex gap-2 items-start">
-              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <span>KUET, Khulna, Bangladesh</span>
-            </li>
-          </ul>
+        <div class="text-sm text-teal-300">
+          <a href="mailto:bniralab@kuet.ac.bd" class="hover:text-white transition-colors">bniralab@kuet.ac.bd</a>
         </div>
       </div>
-      <div class="border-t border-teal-800 mt-10 pt-6 text-center text-xs text-teal-500">
+      <div class="border-t border-teal-800 mt-6 pt-4 text-center text-xs text-teal-500">
         &copy; 2026 BNIRA Lab, KUET. All rights reserved.
       </div>
     </div>
   </footer>
 
-  <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const iconOpen = document.getElementById('icon-open');
-    const iconClose = document.getElementById('icon-close');
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('hidden');
-      iconOpen.classList.toggle('hidden', !open);
-      iconClose.classList.toggle('hidden', open);
-    });
-  </script>
 </body>
 </html>

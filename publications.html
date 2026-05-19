@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="shortcut icon" href="assets/favicon.svg">
   <title>Publications — BNIRA Lab</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,36 +33,23 @@
 <body class="bg-slate-50 font-sans text-slate-800 antialiased">
 
   <!-- NAVBAR -->
-  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg">
+  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg overflow-x-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="index.html" class="flex flex-col leading-tight">
+      <div class="flex items-center justify-between h-16" style="min-width: 720px;">
+        <a href="index.html" class="flex flex-col leading-tight flex-shrink-0">
           <span class="text-white font-bold text-xl tracking-wide">BNIRA Lab</span>
           <span class="text-teal-300 text-xs font-medium">KUET · Biomedical Engineering</span>
         </a>
-        <div class="hidden md:flex items-center gap-6">
-          <a href="index.html"        class="nav-link">Home</a>
-          <a href="research.html"     class="nav-link">Research</a>
-          <a href="people.html"       class="nav-link">People</a>
-          <a href="publications.html" class="nav-link active">Publications</a>
-          <a href="projects.html"     class="nav-link">Projects</a>
-          <a href="join.html"         class="nav-link">Join Us</a>
-          <a href="contact.html"      class="nav-link">Contact</a>
+        <div class="flex items-center gap-6">
+          <a href="index.html"        class="nav-link whitespace-nowrap">Home</a>
+          <a href="research.html"     class="nav-link whitespace-nowrap">Research</a>
+          <a href="people.html"       class="nav-link whitespace-nowrap">People</a>
+          <a href="publications.html" class="nav-link whitespace-nowrap active">Publications</a>
+          <a href="projects.html"     class="nav-link whitespace-nowrap">Projects</a>
+          <a href="join.html"         class="nav-link whitespace-nowrap">Join Us</a>
+          <a href="contact.html"      class="nav-link whitespace-nowrap">Contact</a>
         </div>
-        <button id="menu-btn" class="md:hidden text-white p-2 rounded-md hover:bg-primary-dark transition-colors">
-          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
       </div>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-primary-dark border-t border-teal-700 px-4 pb-4 pt-2 space-y-1">
-      <a href="index.html"        class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Home</a>
-      <a href="research.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Research</a>
-      <a href="people.html"       class="block py-2 text-slate-300 hover:text-white font-medium text-sm">People</a>
-      <a href="publications.html" class="block py-2 text-white font-medium text-sm">Publications</a>
-      <a href="projects.html"     class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Projects</a>
-      <a href="join.html"         class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Join Us</a>
-      <a href="contact.html"      class="block py-2 text-slate-300 hover:text-white font-medium text-sm">Contact</a>
     </div>
   </nav>
 
@@ -80,142 +69,43 @@
       <button onclick="filterPubs('all')"     id="f-all"     class="filter-btn bg-primary text-white text-xs font-semibold px-4 py-2 rounded-full">All</button>
       <button onclick="filterPubs('journal')" id="f-journal" class="filter-btn bg-white border border-slate-200 text-slate-600 text-xs font-semibold px-4 py-2 rounded-full hover:bg-teal-50">Journal Articles</button>
       <button onclick="filterPubs('conf')"    id="f-conf"    class="filter-btn bg-white border border-slate-200 text-slate-600 text-xs font-semibold px-4 py-2 rounded-full hover:bg-teal-50">Conference Papers</button>
-      <button onclick="filterPubs('2026')"    id="f-2026"    class="filter-btn bg-white border border-slate-200 text-slate-600 text-xs font-semibold px-4 py-2 rounded-full hover:bg-teal-50">2026</button>
-      <button onclick="filterPubs('2025')"    id="f-2025"    class="filter-btn bg-white border border-slate-200 text-slate-600 text-xs font-semibold px-4 py-2 rounded-full hover:bg-teal-50">2025</button>
     </div>
   </section>
 
   <!-- PUBLICATIONS LIST -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
 
-    <!-- 2026 -->
-    <div id="year-2026" class="mb-12">
-      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-primary text-white px-3 py-1 rounded-lg text-sm">2026</span>
-      </h2>
-      <div class="space-y-4" id="pubs-2026">
-
-        <div class="pub-card" data-type="journal" data-year="2026">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-teal-100 text-primary">Journal</span>
-            <span class="tag bg-teal-50 text-primary">IEEE TNSRE</span>
-            <span class="tag bg-slate-100 text-slate-600">BCI</span>
-            <span class="tag bg-slate-100 text-slate-600">EEG</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Transformer-Based EEG Motor Imagery Decoding with Channel Attention for Cross-Subject Brain–Computer Interfaces</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">A. Dutta Roy</span>, R. Sarker, M. Hasan
-            — <em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>, vol. 34, 2026.
-          </p>
-          <div class="flex gap-3 mt-3">
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[DOI]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[PDF]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[BibTeX]</a>
-          </div>
-        </div>
-
-        <div class="pub-card" data-type="conf" data-year="2026">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">IEEE EMBC 2026</span>
-            <span class="tag bg-slate-100 text-slate-600">EEG</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Lightweight Attention-Enhanced EfficientNet for Real-Time Seizure Detection on Wearable Devices</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">A. Dutta Roy</span>, F. Akter, N. Kabir
-            — <em>Proc. IEEE Engineering in Medicine and Biology Conference (EMBC)</em>, 2026.
-          </p>
-          <div class="flex gap-3 mt-3">
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[DOI]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[PDF]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[BibTeX]</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
     <!-- 2025 -->
     <div id="year-2025" class="mb-12">
       <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-slate-600 text-white px-3 py-1 rounded-lg text-sm">2025</span>
+        <span class="bg-primary text-white px-3 py-1 rounded-lg text-sm">2025</span>
       </h2>
-      <div class="space-y-4" id="pubs-2025">
+      <div class="space-y-4">
 
         <div class="pub-card" data-type="journal" data-year="2025">
           <div class="flex flex-wrap gap-2 mb-2">
             <span class="tag bg-teal-100 text-primary">Journal</span>
-            <span class="tag bg-teal-50 text-primary">Elsevier BSPC</span>
-            <span class="tag bg-slate-100 text-slate-600">ECG</span>
-            <span class="tag bg-slate-100 text-slate-600">Edge AI</span>
+            <span class="tag bg-slate-100 text-slate-600">VR</span>
+            <span class="tag bg-slate-100 text-slate-600">Ophthalmology</span>
           </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Lightweight CNN-LSTM Architecture for Real-Time Arrhythmia Classification on Edge Devices</h3>
+          <h3 class="font-semibold text-slate-800 leading-snug">A virtual approach: Systematic review and meta-analysis of virtual reality-based therapies for convergence insufficiency</h3>
           <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">A. Dutta Roy</span>, N. Kabir, T. Ahmed
-            — <em>Biomedical Signal Processing and Control</em>, vol. 98, p. 106843, Elsevier, 2025.
+            <span class="font-medium text-slate-700">Torikul Islam, Amit Dutta Roy</span>
+            — 2025.
           </p>
-          <div class="flex gap-3 mt-3">
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[DOI]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[PDF]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[BibTeX]</a>
-          </div>
-        </div>
-
-        <div class="pub-card" data-type="journal" data-year="2025">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-teal-100 text-primary">Journal</span>
-            <span class="tag bg-teal-50 text-primary">IOP JNE</span>
-            <span class="tag bg-slate-100 text-slate-600">EMG</span>
-            <span class="tag bg-slate-100 text-slate-600">Prosthetics</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">EMG-Based Gesture Recognition Using Wavelet Scattering and SVM for Prosthetic Hand Control</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">A. Dutta Roy</span>, T. Ahmed, S. Islam
-            — <em>Journal of Neural Engineering</em>, vol. 22, no. 3, IOP Publishing, 2025.
-          </p>
-          <div class="flex gap-3 mt-3">
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[DOI]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[PDF]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[BibTeX]</a>
-          </div>
         </div>
 
         <div class="pub-card" data-type="conf" data-year="2025">
           <div class="flex flex-wrap gap-2 mb-2">
             <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">ICCIT 2025</span>
-            <span class="tag bg-slate-100 text-slate-600">EEG</span>
-            <span class="tag bg-slate-100 text-slate-600">Cognitive</span>
+            <span class="tag bg-slate-100 text-slate-600">Diabetes</span>
+            <span class="tag bg-slate-100 text-slate-600">Wearable</span>
           </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">EEG-Based Mental Workload Estimation Using Spectro-Temporal Features and Random Forest</h3>
+          <h3 class="font-semibold text-slate-800 leading-snug">Dia-Tracker: A Multimodal Diabetes Assistance Device</h3>
           <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">A. Dutta Roy</span>, S. Islam, R. Khan
-            — <em>Proc. International Conference on Computer and Information Technology (ICCIT)</em>, 2025.
+            <span class="font-medium text-slate-700">Sifat Khan, Maliha Binte Mostofa, Agnila Joye, Amit Dutta Roy</span>
+            — <em>Conference Paper</em>, July 2025.
           </p>
-          <div class="flex gap-3 mt-3">
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[DOI]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[PDF]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[BibTeX]</a>
-          </div>
-        </div>
-
-        <div class="pub-card" data-type="journal" data-year="2025">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-teal-100 text-primary">Journal</span>
-            <span class="tag bg-teal-50 text-primary">Springer MBE</span>
-            <span class="tag bg-slate-100 text-slate-600">Epilepsy</span>
-            <span class="tag bg-slate-100 text-slate-600">Seizure</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Graph Convolutional Network for Automatic Epileptic Seizure Detection from Multi-Channel EEG</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">A. Dutta Roy</span>, M. Hasan
-            — <em>Medical &amp; Biological Engineering &amp; Computing</em>, Springer, 2025.
-          </p>
-          <div class="flex gap-3 mt-3">
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[DOI]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[PDF]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[BibTeX]</a>
-          </div>
         </div>
 
       </div>
@@ -224,26 +114,253 @@
     <!-- 2024 -->
     <div id="year-2024" class="mb-12">
       <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-sm">2024</span>
+        <span class="bg-slate-600 text-white px-3 py-1 rounded-lg text-sm">2024</span>
       </h2>
-      <div class="space-y-4" id="pubs-2024">
+      <div class="space-y-4">
 
         <div class="pub-card" data-type="journal" data-year="2024">
           <div class="flex flex-wrap gap-2 mb-2">
             <span class="tag bg-teal-100 text-primary">Journal</span>
-            <span class="tag bg-teal-50 text-primary">IEEE Access</span>
-            <span class="tag bg-slate-100 text-slate-600">BCI</span>
+            <span class="tag bg-teal-50 text-primary">Scientific Reports</span>
+            <span class="tag bg-slate-100 text-slate-600">EEG</span>
+            <span class="tag bg-slate-100 text-slate-600">Epilepsy</span>
           </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Subject-Independent P300-Based Brain–Computer Interface Using Riemannian Geometry and Transfer Learning</h3>
+          <h3 class="font-semibold text-slate-800 leading-snug">Performance investigation of epilepsy detection from noisy EEG signals using base-2-meta stacking classifier</h3>
           <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">A. Dutta Roy</span>, S. Rahman
-            — <em>IEEE Access</em>, vol. 12, pp. 45231–45244, 2024.
+            <span class="font-medium text-slate-700">Torikul Islam, Redwanul Islam, Monisha Basak, Amit Dutta Roy, Md. Adil Arman, Samanta Paul, Oleksii Shandra, Sk. Rahat Ali</span>
+            — <em>Scientific Reports</em>, Nature Portfolio, 2024.
           </p>
           <div class="flex gap-3 mt-3">
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[DOI]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[PDF]</a>
-            <a href="#" class="text-primary text-xs font-semibold hover:underline">[BibTeX]</a>
+            <a href="https://doi.org/10.1038/s41598-024-61338-2" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
           </div>
+        </div>
+
+        <div class="pub-card" data-type="conf" data-year="2024">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
+            <span class="tag bg-amber-50 text-accent-dark">IEEE COMPAS 2024</span>
+            <span class="tag bg-slate-100 text-slate-600">Bioinformatics</span>
+            <span class="tag bg-slate-100 text-slate-600">SNP</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Computational Analysis of Deleterious Single Nucleotide Polymorphisms (SNPs) in the Human LCT Gene</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Arundhati Roy Dutta, Amit Dutta Roy</span>
+            — <em>2024 IEEE International Conference on Computing, Applications and Systems (COMPAS)</em>, IEEE, 2024.
+          </p>
+          <div class="flex gap-3 mt-3">
+            <a href="https://doi.org/10.1109/COMPAS60761.2024.10796981" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
+          </div>
+        </div>
+
+        <div class="pub-card" data-type="conf" data-year="2024">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
+            <span class="tag bg-amber-50 text-accent-dark">IEEE PEEIACON 2024</span>
+            <span class="tag bg-slate-100 text-slate-600">PCF</span>
+            <span class="tag bg-slate-100 text-slate-600">SPR Sensor</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">PCF-Based SPR Sensors' Air-Hole Attributed Performance Evaluation for Detection of Breast and Adrenal Gland Cancer</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Md. Meftahul Islam, Amit Dutta Roy</span>
+            — <em>2024 International Conference on Power, Electrical, Electronics and Industrial Applications (PEEIACON)</em>, IEEE, 2024.
+          </p>
+        </div>
+
+        <div class="pub-card" data-type="conf" data-year="2024">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
+            <span class="tag bg-amber-50 text-accent-dark">IEEE ICEEICT 2024</span>
+            <span class="tag bg-slate-100 text-slate-600">PCF</span>
+            <span class="tag bg-slate-100 text-slate-600">Blood Cancer</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Numerical Analysis on PCF-based SPR Sensors' Air-hole Attributed Performance to Blood Cancer Detection</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Md. Meftahul Islam, Amit Dutta Roy</span>
+            — <em>2024 6th International Conference on Electrical Engineering and Information &amp; Communication Technology (ICEEICT)</em>, IEEE, 2024.
+          </p>
+          <div class="flex gap-3 mt-3">
+            <a href="https://doi.org/10.1109/ICEEICT62016.2024.10534373" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2023 -->
+    <div id="year-2023" class="mb-12">
+      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
+        <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-sm">2023</span>
+      </h2>
+      <div class="space-y-4">
+
+        <div class="pub-card" data-type="journal" data-year="2023">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-teal-100 text-primary">Journal</span>
+            <span class="tag bg-teal-50 text-primary">Heliyon, Elsevier</span>
+            <span class="tag bg-slate-100 text-slate-600">EEG</span>
+            <span class="tag bg-slate-100 text-slate-600">Epilepsy</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Investigating population-specific epilepsy detection from noisy EEG signals using deep-learning models</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Torikul Islam, Monisha Basak, Redwanul Islam, Amit Dutta Roy</span>
+            — <em>Heliyon</em>, Elsevier, 2023.
+          </p>
+          <div class="flex gap-3 mt-3">
+            <a href="https://doi.org/10.1016/j.heliyon.2023.e22208" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
+          </div>
+        </div>
+
+        <div class="pub-card" data-type="conf" data-year="2023">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
+            <span class="tag bg-amber-50 text-accent-dark">IEEE ICCIT 2023</span>
+            <span class="tag bg-slate-100 text-slate-600">EMG</span>
+            <span class="tag bg-slate-100 text-slate-600">Prosthetics</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Advancing Prosthetic Arm Control: An EMG-Based Grasp Force Estimation Towards Anthropomorphic Movement</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Fahim Islam Anik, Nazmus Sakib, Amit Dutta Roy, Md. Helal An Nahiyan</span>
+            — <em>2023 26th International Conference on Computer and Information Technology (ICCIT)</em>, IEEE, 2023.
+          </p>
+        </div>
+
+        <div class="pub-card" data-type="conf" data-year="2023">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
+            <span class="tag bg-amber-50 text-accent-dark">IEEE EICT 2023</span>
+            <span class="tag bg-slate-100 text-slate-600">MPC</span>
+            <span class="tag bg-slate-100 text-slate-600">Phototherapy</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Synergistic MPC and Temperature Regulator in Phototherapeutic-Incubator: A Mathematical Modeling Approach</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Tasnim Ahmed, Most. Jaytun Nahar, Ayesha Tun Nashrah, Atqia Labiba Asha, Amit Dutta Roy</span>
+            — <em>2023 6th International Conference on Electrical Information and Communication Technology (EICT)</em>, IEEE, 2023.
+          </p>
+          <div class="flex gap-3 mt-3">
+            <a href="https://doi.org/10.1109/EICT61409.2023.10427867" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2022 -->
+    <div id="year-2022" class="mb-12">
+      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
+        <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-sm">2022</span>
+      </h2>
+      <div class="space-y-4">
+
+        <div class="pub-card" data-type="journal" data-year="2022">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-teal-100 text-primary">Journal</span>
+            <span class="tag bg-teal-50 text-primary">Hindawi</span>
+            <span class="tag bg-slate-100 text-slate-600">Nanomaterials</span>
+            <span class="tag bg-slate-100 text-slate-600">ZnO</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Mycosynthesis of Zinc Oxide Nanoparticles Coated with Silver using Ganoderma lucidum and Its Evaluation of In Vitro Antidiabetic and Anticancer Potential</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">D.S. Ranjith Santhosh Kumar, N. Elango, G. D. Selvaraju, P. A. Matthew, S. Palanisamy, H. Cho, F. S. Al Khattaf, A. A. Hatamleh, Amit Dutta Roy</span>
+            — <em>Journal of Nanomaterials</em>, Hindawi, 2022.
+          </p>
+          <div class="flex gap-3 mt-3">
+            <a href="https://doi.org/10.1155/2022/2798532" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
+          </div>
+        </div>
+
+        <div class="pub-card" data-type="conf" data-year="2022">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
+            <span class="tag bg-amber-50 text-accent-dark">Springer ICICTD 2022</span>
+            <span class="tag bg-slate-100 text-slate-600">ECG</span>
+            <span class="tag bg-slate-100 text-slate-600">CNN</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Detection of Ventricular Fibrillation from ECG Signal using Hybrid Scalogram-based Convolutional Neural Network</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Faisal Mina, Amit Dutta Roy, Md. Bashir Uddin</span>
+            — <em>1st International Conference on Information and Communication Technology for Development (ICICTD)</em>, Springer, 2022.
+          </p>
+          <div class="flex gap-3 mt-3">
+            <a href="https://doi.org/10.1007/978-981-19-7528-8_38" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2021 -->
+    <div id="year-2021" class="mb-12">
+      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
+        <span class="bg-slate-400 text-white px-3 py-1 rounded-lg text-sm">2021</span>
+      </h2>
+      <div class="space-y-4">
+
+        <div class="pub-card" data-type="conf" data-year="2021">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
+            <span class="tag bg-amber-50 text-accent-dark">IEEE ACMI 2021</span>
+            <span class="tag bg-slate-100 text-slate-600">Glioma</span>
+            <span class="tag bg-slate-100 text-slate-600">Segmentation</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Automatic Segmentation and Shape, Texture-based Analysis of Glioma Using Fully Convolutional Network</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Mohammad Badhruddouza Khan, Pranto Soumik Saha, Amit Dutta Roy</span>
+            — <em>ACMI 2021</em>, IEEE.
+          </p>
+          <div class="flex gap-3 mt-3">
+            <a href="https://doi.org/10.1109/ACMI53878.2021.9528282" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2020 -->
+    <div id="year-2020" class="mb-12">
+      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
+        <span class="bg-slate-400 text-white px-3 py-1 rounded-lg text-sm">2020</span>
+      </h2>
+      <div class="space-y-4">
+
+        <div class="pub-card" data-type="conf" data-year="2020">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
+            <span class="tag bg-amber-50 text-accent-dark">IEEE ICCIT 2020</span>
+            <span class="tag bg-slate-100 text-slate-600">EEG</span>
+            <span class="tag bg-slate-100 text-slate-600">Epilepsy</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Detection of Epileptic Seizures from Wavelet Scalogram of EEG Signal Using Transfer Learning with AlexNet Convolutional Neural Network</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Amit Dutta Roy, Muhammad Muinul Islam</span>
+            — <em>ICCIT 2020</em>, IEEE.
+          </p>
+          <div class="flex gap-3 mt-3">
+            <a href="https://doi.org/10.1109/ICCIT51783.2020.9392720" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2019 -->
+    <div id="year-2019" class="mb-12">
+      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
+        <span class="bg-slate-400 text-white px-3 py-1 rounded-lg text-sm">2019</span>
+      </h2>
+      <div class="space-y-4">
+
+        <div class="pub-card" data-type="conf" data-year="2019">
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
+            <span class="tag bg-amber-50 text-accent-dark">IEEE EICT 2019</span>
+            <span class="tag bg-slate-100 text-slate-600">ECG</span>
+            <span class="tag bg-slate-100 text-slate-600">Arrhythmia</span>
+          </div>
+          <h3 class="font-semibold text-slate-800 leading-snug">Automatic Identification of Arrhythmia from ECG Using AlexNet Convolutional Neural Network</h3>
+          <p class="text-slate-500 text-sm mt-1">
+            <span class="font-medium text-slate-700">Fazla Rabbi Mashrur, Amit Dutta Roy, Dabasish Kumar Saha</span>
+            — <em>EICT 2019</em>, IEEE.
+          </p>
         </div>
 
       </div>
@@ -253,44 +370,24 @@
 
   <!-- FOOTER -->
   <footer class="bg-primary-xdark text-teal-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="md:col-span-2">
-          <div class="text-white font-bold text-xl mb-1">BNIRA Lab</div>
-          <div class="text-teal-400 text-xs mb-4">Bio-Neural Intelligence &amp; Research Advancement</div>
-          <p class="text-sm leading-relaxed text-teal-300">Department of Biomedical Engineering<br />Khulna University of Engineering &amp; Technology (KUET)<br />Khulna-9203, Bangladesh</p>
-        </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Navigation</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="research.html"     class="hover:text-white transition-colors">Research</a></li>
-            <li><a href="people.html"       class="hover:text-white transition-colors">People</a></li>
-            <li><a href="publications.html" class="hover:text-white transition-colors">Publications</a></li>
-            <li><a href="projects.html"     class="hover:text-white transition-colors">Projects</a></li>
-            <li><a href="join.html"         class="hover:text-white transition-colors">Join Us</a></li>
-            <li><a href="contact.html"      class="hover:text-white transition-colors">Contact</a></li>
-          </ul>
+          <div class="text-white font-bold text-lg mb-1">BNIRA Lab</div>
+          <div class="text-teal-400 text-xs mb-2">Bio-Neural Intelligence &amp; Research Advancement</div>
+          <p class="text-sm text-teal-300">Department of Biomedical Engineering, KUET · Khulna-9203, Bangladesh</p>
         </div>
-        <div>
-          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Contact</h4>
-          <ul class="space-y-2 text-sm"><li>bniralab@kuet.ac.bd</li><li>KUET, Khulna, Bangladesh</li></ul>
+        <div class="text-sm text-teal-300">
+          <a href="mailto:bniralab@kuet.ac.bd" class="hover:text-white transition-colors">bniralab@kuet.ac.bd</a>
         </div>
       </div>
-      <div class="border-t border-teal-800 mt-10 pt-6 text-center text-xs text-teal-500">&copy; 2026 BNIRA Lab, KUET. All rights reserved.</div>
+      <div class="border-t border-teal-800 mt-6 pt-4 text-center text-xs text-teal-500">
+        &copy; 2026 BNIRA Lab, KUET. All rights reserved.
+      </div>
     </div>
   </footer>
 
   <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const iconOpen = document.getElementById('icon-open');
-    const iconClose = document.getElementById('icon-close');
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('hidden');
-      iconOpen.classList.toggle('hidden', !open);
-      iconClose.classList.toggle('hidden', open);
-    });
-
     function filterPubs(type) {
       const cards = document.querySelectorAll('.pub-card');
       const yearSections = document.querySelectorAll('[id^="year-"]');
