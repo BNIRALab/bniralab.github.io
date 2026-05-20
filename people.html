@@ -60,33 +60,52 @@
     .theme-btn svg{color:#cbd5e1;transition:color .15s}
     .theme-btn.active{background-color:rgba(255,255,255,.12)}
     .theme-btn.active svg{color:#d97706}
+    .mobile-nav-link{display:block;padding:14px 20px;color:#fff;font-weight:500;border-bottom:1px solid rgba(255,255,255,.15);text-decoration:none;transition:background .15s}
+    .mobile-nav-link:hover{background:rgba(255,255,255,.08)}
+    .mobile-nav-link.active{color:#d97706}
+    #mobile-menu{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#0d6e6e}
+    #mobile-menu.open{max-height:400px}
   </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased">
 
   <!-- NAVBAR -->
-  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg overflow-x-auto">
+  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16" style="min-width: 720px;">
+      <div class="flex items-center justify-between h-16">
         <a href="index.html" class="flex flex-col leading-tight flex-shrink-0">
           <span class="text-white font-bold text-xl tracking-wide">BNIRA Lab</span>
           <span class="text-teal-300 text-xs font-medium">KUET · Biomedical Engineering</span>
         </a>
-        <div class="flex items-center gap-6">
-          <a href="index.html"        class="nav-link whitespace-nowrap">Home</a>
-          <a href="research.html"     class="nav-link whitespace-nowrap">Research</a>
-          <a href="people.html"       class="nav-link whitespace-nowrap active">People</a>
-          <a href="publications.html" class="nav-link whitespace-nowrap">Publications</a>
-          <a href="projects.html"     class="nav-link whitespace-nowrap">Projects</a>
-          <a href="join.html"         class="nav-link whitespace-nowrap">Join Us</a>
-          <a href="contact.html"      class="nav-link whitespace-nowrap">Contact</a>
+        <div class="flex items-center gap-2">
+          <div class="hidden md:flex items-center gap-6">
+            <a href="index.html"        class="nav-link whitespace-nowrap">Home</a>
+            <a href="research.html"     class="nav-link whitespace-nowrap">Research</a>
+            <a href="people.html"       class="nav-link whitespace-nowrap active">People</a>
+            <a href="publications.html" class="nav-link whitespace-nowrap">Publications</a>
+            <a href="projects.html"     class="nav-link whitespace-nowrap">Projects</a>
+            <a href="join.html"         class="nav-link whitespace-nowrap">Join Us</a>
+            <a href="contact.html"      class="nav-link whitespace-nowrap">Contact</a>
+          </div>
           <div class="flex items-center gap-0.5 pl-3" style="border-left:1px solid rgba(15,128,128,0.4)">
             <button onclick="setTheme('light')" id="btn-light" title="Light mode" class="theme-btn p-1.5 rounded-md"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
             <button onclick="setTheme('dark')" id="btn-dark" title="Dark mode" class="theme-btn p-1.5 rounded-md"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button>
             <button onclick="setTheme('system')" id="btn-system" title="System (follows OS)" class="theme-btn p-1.5 rounded-md"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></button>
           </div>
+          <button id="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" class="md:hidden ml-1 p-1.5 rounded-md text-white hover:bg-white/10 transition-colors">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
         </div>
       </div>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html"        class="mobile-nav-link">Home</a>
+      <a href="research.html"     class="mobile-nav-link">Research</a>
+      <a href="people.html"       class="mobile-nav-link active">People</a>
+      <a href="publications.html" class="mobile-nav-link">Publications</a>
+      <a href="projects.html"     class="mobile-nav-link">Projects</a>
+      <a href="join.html"         class="mobile-nav-link">Join Us</a>
+      <a href="contact.html"      class="mobile-nav-link">Contact</a>
     </div>
   </nav>
 
@@ -128,17 +147,18 @@
           </div>
         </div>
         <div>
-          <h3 class="text-2xl font-bold text-slate-800">Dr. Amit Dutta Roy</h3>
-          <p class="text-primary font-medium mt-1">Assistant Professor</p>
-          <p class="text-slate-500 text-sm">Department of Biomedical Engineering, KUET</p>
+          <h3 class="text-2xl font-bold text-slate-800">Amit Dutta Roy</h3>
+          <p class="text-primary font-medium mt-1">Assistant Professor (on leave)</p>
+          <p class="text-slate-500 text-sm">Department of Biomedical Engineering, Khulna University of Engineering &amp; Technology (KUET)</p>
+          <p class="text-slate-500 text-sm mt-1">Graduate Fellow · Department of Biomedical Engineering, University of Minnesota Twin Cities</p>
           <p class="text-slate-600 mt-4 leading-relaxed">
-            Dr. Roy received his Ph.D. in Biomedical Engineering with specialization in neural signal processing and brain–computer interface systems. His research interests include EEG/EMG-based BCI, deep learning for clinical biosignals, and wearable neurological monitoring. He has authored papers in IEEE, Elsevier, and IOP Publishing journals and serves as a reviewer for several international journals.
+            Amit Dutta Roy is an Assistant Professor (on leave) in the Department of Biomedical Engineering at Khulna University of Engineering &amp; Technology (KUET), Bangladesh. He is currently a Graduate Fellow in the Department of Biomedical Engineering at the University of Minnesota Twin Cities, where he is pursuing his PhD. His research interests include neural engineering, neuromodulation, biosignal processing, and deep learning for biomedical applications.
           </p>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">BCI</span>
-            <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Neural Signal Processing</span>
+            <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Neural Engineering</span>
+            <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Neuromodulation</span>
+            <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Biosignal Processing</span>
             <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Deep Learning</span>
-            <span class="bg-teal-50 text-primary text-xs px-3 py-1 rounded-full font-medium">Wearable Sensing</span>
           </div>
           <div class="mt-4 text-sm text-slate-500">
             <span class="font-medium text-slate-700">Email:</span> amit@bme.kuet.ac.bd &nbsp;|&nbsp;
@@ -255,6 +275,8 @@
         }
       });
     })();
+    function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open');}
+    function closeMenu(){document.getElementById('mobile-menu').classList.remove('open');}
   </script>
 </body>
 </html>

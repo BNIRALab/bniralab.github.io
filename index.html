@@ -7,7 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="shortcut icon" href="assets/favicon.svg">
   <title>BNIRA Lab — Bio-Neural Intelligence & Research Advancement</title>
-  <meta name="description" content="Bio-Neural Intelligence and Research Advancement Lab at KUET, led by Dr. Amit Dutta Roy." />
+  <meta name="description" content="Bio-Neural Intelligence and Research Advancement Lab at KUET, led by Amit Dutta Roy." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -66,33 +66,52 @@
     .theme-btn svg{color:#cbd5e1;transition:color .15s}
     .theme-btn.active{background-color:rgba(255,255,255,.12)}
     .theme-btn.active svg{color:#d97706}
+    .mobile-nav-link{display:block;padding:14px 20px;color:#fff;font-weight:500;border-bottom:1px solid rgba(255,255,255,.15);text-decoration:none;transition:background .15s}
+    .mobile-nav-link:hover{background:rgba(255,255,255,.08)}
+    .mobile-nav-link.active{color:#d97706}
+    #mobile-menu{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#0d6e6e}
+    #mobile-menu.open{max-height:400px}
   </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased">
 
   <!-- NAVBAR -->
-  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg overflow-x-auto">
+  <nav class="bg-primary-xdark sticky top-0 z-50 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16" style="min-width: 720px;">
+      <div class="flex items-center justify-between h-16">
         <a href="index.html" class="flex flex-col leading-tight flex-shrink-0">
           <span class="text-white font-bold text-xl tracking-wide">BNIRA Lab</span>
           <span class="text-teal-300 text-xs font-medium">KUET · Biomedical Engineering</span>
         </a>
-        <div class="flex items-center gap-6">
-          <a href="index.html"        class="nav-link whitespace-nowrap active">Home</a>
-          <a href="research.html"     class="nav-link whitespace-nowrap">Research</a>
-          <a href="people.html"       class="nav-link whitespace-nowrap">People</a>
-          <a href="publications.html" class="nav-link whitespace-nowrap">Publications</a>
-          <a href="projects.html"     class="nav-link whitespace-nowrap">Projects</a>
-          <a href="join.html"         class="nav-link whitespace-nowrap">Join Us</a>
-          <a href="contact.html"      class="nav-link whitespace-nowrap">Contact</a>
+        <div class="flex items-center gap-2">
+          <div class="hidden md:flex items-center gap-6">
+            <a href="index.html"        class="nav-link whitespace-nowrap active">Home</a>
+            <a href="research.html"     class="nav-link whitespace-nowrap">Research</a>
+            <a href="people.html"       class="nav-link whitespace-nowrap">People</a>
+            <a href="publications.html" class="nav-link whitespace-nowrap">Publications</a>
+            <a href="projects.html"     class="nav-link whitespace-nowrap">Projects</a>
+            <a href="join.html"         class="nav-link whitespace-nowrap">Join Us</a>
+            <a href="contact.html"      class="nav-link whitespace-nowrap">Contact</a>
+          </div>
           <div class="flex items-center gap-0.5 pl-3" style="border-left:1px solid rgba(15,128,128,0.4)">
             <button onclick="setTheme('light')" id="btn-light" title="Light mode" class="theme-btn p-1.5 rounded-md"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
             <button onclick="setTheme('dark')" id="btn-dark" title="Dark mode" class="theme-btn p-1.5 rounded-md"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button>
             <button onclick="setTheme('system')" id="btn-system" title="System (follows OS)" class="theme-btn p-1.5 rounded-md"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></button>
           </div>
+          <button id="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" class="md:hidden ml-1 p-1.5 rounded-md text-white hover:bg-white/10 transition-colors">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
         </div>
       </div>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html"        class="mobile-nav-link active">Home</a>
+      <a href="research.html"     class="mobile-nav-link">Research</a>
+      <a href="people.html"       class="mobile-nav-link">People</a>
+      <a href="publications.html" class="mobile-nav-link">Publications</a>
+      <a href="projects.html"     class="mobile-nav-link">Projects</a>
+      <a href="join.html"         class="mobile-nav-link">Join Us</a>
+      <a href="contact.html"      class="mobile-nav-link">Contact</a>
     </div>
   </nav>
 
@@ -284,10 +303,10 @@
         </div>
         <div>
           <p class="text-teal-300 uppercase tracking-widest text-sm font-semibold mb-1">Principal Investigator</p>
-          <h2 class="text-3xl font-bold mb-2">Dr. Amit Dutta Roy</h2>
-          <p class="text-teal-100 text-sm mb-3">Assistant Professor, Department of Biomedical Engineering, KUET</p>
+          <h2 class="text-3xl font-bold mb-2">Amit Dutta Roy</h2>
+          <p class="text-teal-100 text-sm mb-3">Assistant Professor (on leave) · Dept. of Biomedical Engineering, KUET<br>Graduate Fellow · Dept. of Biomedical Engineering, University of Minnesota Twin Cities</p>
           <p class="text-teal-200 leading-relaxed max-w-2xl">
-            Dr. Roy's research focuses on neural signal processing, brain–computer interfaces, and the application of deep learning in clinical neuroscience. He has published in IEEE, Elsevier, and Springer venues and supervises graduate and undergraduate thesis students at BNIRA Lab.
+            Amit Dutta Roy is an Assistant Professor (on leave) at KUET, currently a Graduate Fellow at the University of Minnesota Twin Cities pursuing his PhD. His research interests include neural engineering, neuromodulation, biosignal processing, and deep learning for biomedical applications.
           </p>
           <div class="flex gap-4 mt-4">
             <a href="https://scholar.google.com/citations?user=ZpUq_acAAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener" class="text-teal-300 hover:text-white transition-colors">
@@ -413,6 +432,8 @@
         }
       });
     })();
+    function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open');}
+    function closeMenu(){document.getElementById('mobile-menu').classList.remove('open');}
   </script>
 </body>
 </html>
