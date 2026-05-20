@@ -70,6 +70,12 @@
     .btn-primary{color:#fff!important}
     .btn-outline{color:#fff!important}
     .btn-outline:hover{color:#0d6e6e!important}
+    .doi-badge{display:inline-flex;align-items:center;background:#e6f4f4;color:#0d6e6e;font-size:.7rem;font-weight:700;letter-spacing:.02em;padding:.15rem .55rem;border-radius:9999px;text-decoration:none;margin-left:.4rem;vertical-align:middle;transition:background .15s}
+    .doi-badge:hover{background:#ccebeb}
+    [data-theme="dark"] .doi-badge{background:rgba(13,110,110,.25);color:#5eead4}
+    [data-theme="dark"] .doi-badge:hover{background:rgba(13,110,110,.4)}
+    .pub-label{font-family:monospace;font-size:.75rem;font-weight:700;color:#0d6e6e;flex-shrink:0;width:2.8rem;padding-top:.1rem}
+    [data-theme="dark"] .pub-label{color:#5eead4}
   </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased">
@@ -122,304 +128,152 @@
     </div>
   </section>
 
-  <!-- FILTER + SEARCH BAR -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="flex flex-wrap gap-3 items-center">
-      <span class="text-slate-500 text-sm font-medium">Filter by:</span>
-      <button onclick="filterPubs('all')"     id="f-all"     class="filter-btn bg-primary text-white text-xs font-semibold px-4 py-2 rounded-full">All</button>
-      <button onclick="filterPubs('journal')" id="f-journal" class="filter-btn bg-white border border-slate-200 text-slate-600 text-xs font-semibold px-4 py-2 rounded-full hover:bg-teal-50">Journal Articles</button>
-      <button onclick="filterPubs('conf')"    id="f-conf"    class="filter-btn bg-white border border-slate-200 text-slate-600 text-xs font-semibold px-4 py-2 rounded-full hover:bg-teal-50">Conference Papers</button>
+  <!-- TAB LINKS -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-0">
+    <div class="flex gap-8 border-b border-slate-200">
+      <a href="#journals" class="text-primary font-semibold text-sm pb-3 border-b-2 border-primary -mb-px">Journal Articles <span class="text-slate-400 font-normal">(4)</span></a>
+      <a href="#conferences" class="text-slate-500 font-semibold text-sm pb-3 hover:text-primary transition-colors">Conference Papers <span class="text-slate-400 font-normal">(10)</span></a>
     </div>
   </section>
 
-  <!-- PUBLICATIONS LIST -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+  <!-- PUBLICATIONS -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
 
-    <!-- 2025 -->
-    <div id="year-2025" class="mb-12">
-      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-primary text-white px-3 py-1 rounded-lg text-sm">2025</span>
-      </h2>
-      <div class="space-y-4">
+    <!-- JOURNAL ARTICLES -->
+    <div id="journals" class="scroll-mt-20 pt-12 mb-20">
+      <h2 class="text-xl font-bold text-slate-800 mb-1">Journal Articles</h2>
+      <p class="text-slate-400 text-xs mb-6">ADR = <strong>Amit Dutta Roy</strong></p>
 
-        <div class="pub-card" data-type="journal" data-year="2025">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-teal-100 text-primary">Journal</span>
-            <span class="tag bg-slate-100 text-slate-600">VR</span>
-            <span class="tag bg-slate-100 text-slate-600">Ophthalmology</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">A virtual approach: Systematic review and meta-analysis of virtual reality-based therapies for convergence insufficiency</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Torikul Islam, Amit Dutta Roy</span>
-            — 2025.
+      <div class="divide-y divide-slate-200">
+
+        <!-- J4 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[J4]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Torikul Islam, <strong>Amit Dutta Roy</strong>. "A virtual approach: Systematic review and meta-analysis of virtual reality-based therapies for convergence insufficiency." <em>Journal of Optometry</em>, Elsevier, 2025.
+            <a href="https://doi.org/10.1016/j.optom.2025.100540" target="_blank" rel="noopener" class="doi-badge">DOI</a>
           </p>
         </div>
 
-        <div class="pub-card" data-type="conf" data-year="2025">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-slate-100 text-slate-600">Diabetes</span>
-            <span class="tag bg-slate-100 text-slate-600">Wearable</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Dia-Tracker: A Multimodal Diabetes Assistance Device</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Sifat Khan, Maliha Binte Mostofa, Agnila Joye, Amit Dutta Roy</span>
-            — <em>Conference Paper</em>, July 2025.
+        <!-- J3 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[J3]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Torikul Islam, Redwanul Islam, Monisha Basak, <strong>Amit Dutta Roy</strong>, Md. Adil Arman, Samanta Paul, Oleksii Shandra, Sk. Rahat Ali. "Performance investigation of epilepsy detection from noisy EEG signals using base-2-meta stacking classifier." <em>Scientific Reports</em>, Nature Portfolio, 2024.
+            <a href="https://doi.org/10.1038/s41598-024-61338-2" target="_blank" rel="noopener" class="doi-badge">DOI</a>
+          </p>
+        </div>
+
+        <!-- J2 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[J2]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Torikul Islam, Monisha Basak, Redwanul Islam, <strong>Amit Dutta Roy</strong>. "Investigating population-specific epilepsy detection from noisy EEG signals using deep-learning models." <em>Heliyon</em>, Elsevier, 2023.
+            <a href="https://doi.org/10.1016/j.heliyon.2023.e22208" target="_blank" rel="noopener" class="doi-badge">DOI</a>
+          </p>
+        </div>
+
+        <!-- J1 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[J1]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            D.S. Ranjith Santhosh Kumar, N. Elango, G. D. Selvaraju, P. A. Matthew, S. Palanisamy, H. Cho, F. S. Al Khattaf, A. A. Hatamleh, <strong>Amit Dutta Roy</strong>. "Mycosynthesis of Zinc Oxide Nanoparticles Coated with Silver using Ganoderma lucidum and Its Evaluation of In Vitro Antidiabetic and Anticancer Potential." <em>Journal of Nanomaterials</em>, Hindawi, 2022.
+            <a href="https://doi.org/10.1155/2022/2798532" target="_blank" rel="noopener" class="doi-badge">DOI</a>
           </p>
         </div>
 
       </div>
     </div>
 
-    <!-- 2024 -->
-    <div id="year-2024" class="mb-12">
-      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-slate-600 text-white px-3 py-1 rounded-lg text-sm">2024</span>
-      </h2>
-      <div class="space-y-4">
+    <!-- CONFERENCE PAPERS -->
+    <div id="conferences" class="scroll-mt-20 pt-4">
+      <h2 class="text-xl font-bold text-slate-800 mb-6">Conference Papers</h2>
 
-        <div class="pub-card" data-type="journal" data-year="2024">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-teal-100 text-primary">Journal</span>
-            <span class="tag bg-teal-50 text-primary">Scientific Reports</span>
-            <span class="tag bg-slate-100 text-slate-600">EEG</span>
-            <span class="tag bg-slate-100 text-slate-600">Epilepsy</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Performance investigation of epilepsy detection from noisy EEG signals using base-2-meta stacking classifier</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Torikul Islam, Redwanul Islam, Monisha Basak, Amit Dutta Roy, Md. Adil Arman, Samanta Paul, Oleksii Shandra, Sk. Rahat Ali</span>
-            — <em>Scientific Reports</em>, Nature Portfolio, 2024.
-          </p>
-          <div class="flex gap-3 mt-3">
-            <a href="https://doi.org/10.1038/s41598-024-61338-2" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
-          </div>
-        </div>
+      <div class="divide-y divide-slate-200">
 
-        <div class="pub-card" data-type="conf" data-year="2024">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">IEEE COMPAS 2024</span>
-            <span class="tag bg-slate-100 text-slate-600">Bioinformatics</span>
-            <span class="tag bg-slate-100 text-slate-600">SNP</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Computational Analysis of Deleterious Single Nucleotide Polymorphisms (SNPs) in the Human LCT Gene</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Arundhati Roy Dutta, Amit Dutta Roy</span>
-            — <em>2024 IEEE International Conference on Computing, Applications and Systems (COMPAS)</em>, IEEE, 2024.
-          </p>
-          <div class="flex gap-3 mt-3">
-            <a href="https://doi.org/10.1109/COMPAS60761.2024.10796981" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
-          </div>
-        </div>
-
-        <div class="pub-card" data-type="conf" data-year="2024">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">IEEE PEEIACON 2024</span>
-            <span class="tag bg-slate-100 text-slate-600">PCF</span>
-            <span class="tag bg-slate-100 text-slate-600">SPR Sensor</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">PCF-Based SPR Sensors' Air-Hole Attributed Performance Evaluation for Detection of Breast and Adrenal Gland Cancer</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Md. Meftahul Islam, Amit Dutta Roy</span>
-            — <em>2024 International Conference on Power, Electrical, Electronics and Industrial Applications (PEEIACON)</em>, IEEE, 2024.
+        <!-- C10 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C10]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Sifat Khan, Maliha Binte Mostofa, Agnila Joye, <strong>Amit Dutta Roy</strong>. "Dia-Tracker: A Multimodal Diabetes Assistance Device." Conference Paper, 2025.
           </p>
         </div>
 
-        <div class="pub-card" data-type="conf" data-year="2024">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">IEEE ICEEICT 2024</span>
-            <span class="tag bg-slate-100 text-slate-600">PCF</span>
-            <span class="tag bg-slate-100 text-slate-600">Blood Cancer</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Numerical Analysis on PCF-based SPR Sensors' Air-hole Attributed Performance to Blood Cancer Detection</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Md. Meftahul Islam, Amit Dutta Roy</span>
-            — <em>2024 6th International Conference on Electrical Engineering and Information &amp; Communication Technology (ICEEICT)</em>, IEEE, 2024.
-          </p>
-          <div class="flex gap-3 mt-3">
-            <a href="https://doi.org/10.1109/ICEEICT62016.2024.10534373" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- 2023 -->
-    <div id="year-2023" class="mb-12">
-      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-sm">2023</span>
-      </h2>
-      <div class="space-y-4">
-
-        <div class="pub-card" data-type="journal" data-year="2023">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-teal-100 text-primary">Journal</span>
-            <span class="tag bg-teal-50 text-primary">Heliyon, Elsevier</span>
-            <span class="tag bg-slate-100 text-slate-600">EEG</span>
-            <span class="tag bg-slate-100 text-slate-600">Epilepsy</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Investigating population-specific epilepsy detection from noisy EEG signals using deep-learning models</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Torikul Islam, Monisha Basak, Redwanul Islam, Amit Dutta Roy</span>
-            — <em>Heliyon</em>, Elsevier, 2023.
-          </p>
-          <div class="flex gap-3 mt-3">
-            <a href="https://doi.org/10.1016/j.heliyon.2023.e22208" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
-          </div>
-        </div>
-
-        <div class="pub-card" data-type="conf" data-year="2023">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">IEEE ICCIT 2023</span>
-            <span class="tag bg-slate-100 text-slate-600">EMG</span>
-            <span class="tag bg-slate-100 text-slate-600">Prosthetics</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Advancing Prosthetic Arm Control: An EMG-Based Grasp Force Estimation Towards Anthropomorphic Movement</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Fahim Islam Anik, Nazmus Sakib, Amit Dutta Roy, Md. Helal An Nahiyan</span>
-            — <em>2023 26th International Conference on Computer and Information Technology (ICCIT)</em>, IEEE, 2023.
+        <!-- C9 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C9]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Arundhati Roy Dutta, <strong>Amit Dutta Roy</strong>. "Computational Analysis of Deleterious Single Nucleotide Polymorphisms (SNPs) in the Human LCT Gene." <em>2024 IEEE International Conference on Computing, Applications and Systems (COMPAS)</em>, IEEE, 2024.
+            <a href="https://doi.org/10.1109/COMPAS60761.2024.10796981" target="_blank" rel="noopener" class="doi-badge">DOI</a>
           </p>
         </div>
 
-        <div class="pub-card" data-type="conf" data-year="2023">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">IEEE EICT 2023</span>
-            <span class="tag bg-slate-100 text-slate-600">MPC</span>
-            <span class="tag bg-slate-100 text-slate-600">Phototherapy</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Synergistic MPC and Temperature Regulator in Phototherapeutic-Incubator: A Mathematical Modeling Approach</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Tasnim Ahmed, Most. Jaytun Nahar, Ayesha Tun Nashrah, Atqia Labiba Asha, Amit Dutta Roy</span>
-            — <em>2023 6th International Conference on Electrical Information and Communication Technology (EICT)</em>, IEEE, 2023.
+        <!-- C8 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C8]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Md. Meftahul Islam, <strong>Amit Dutta Roy</strong>. "PCF-Based SPR Sensors' Air-Hole Attributed Performance Evaluation for Detection of Breast and Adrenal Gland Cancer." <em>2024 International Conference on Power, Electrical, Electronics and Industrial Applications (PEEIACON)</em>, IEEE, 2024.
           </p>
-          <div class="flex gap-3 mt-3">
-            <a href="https://doi.org/10.1109/EICT61409.2023.10427867" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
-          </div>
         </div>
 
-      </div>
-    </div>
-
-    <!-- 2022 -->
-    <div id="year-2022" class="mb-12">
-      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-slate-500 text-white px-3 py-1 rounded-lg text-sm">2022</span>
-      </h2>
-      <div class="space-y-4">
-
-        <div class="pub-card" data-type="journal" data-year="2022">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-teal-100 text-primary">Journal</span>
-            <span class="tag bg-teal-50 text-primary">Hindawi</span>
-            <span class="tag bg-slate-100 text-slate-600">Nanomaterials</span>
-            <span class="tag bg-slate-100 text-slate-600">ZnO</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Mycosynthesis of Zinc Oxide Nanoparticles Coated with Silver using Ganoderma lucidum and Its Evaluation of In Vitro Antidiabetic and Anticancer Potential</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">D.S. Ranjith Santhosh Kumar, N. Elango, G. D. Selvaraju, P. A. Matthew, S. Palanisamy, H. Cho, F. S. Al Khattaf, A. A. Hatamleh, Amit Dutta Roy</span>
-            — <em>Journal of Nanomaterials</em>, Hindawi, 2022.
+        <!-- C7 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C7]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Md. Meftahul Islam, <strong>Amit Dutta Roy</strong>. "Numerical Analysis on PCF-based SPR Sensors' Air-hole Attributed Performance to Blood Cancer Detection." <em>2024 6th International Conference on Electrical Engineering and Information &amp; Communication Technology (ICEEICT)</em>, IEEE, 2024.
+            <a href="https://doi.org/10.1109/ICEEICT62016.2024.10534373" target="_blank" rel="noopener" class="doi-badge">DOI</a>
           </p>
-          <div class="flex gap-3 mt-3">
-            <a href="https://doi.org/10.1155/2022/2798532" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
-          </div>
         </div>
 
-        <div class="pub-card" data-type="conf" data-year="2022">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">Springer ICICTD 2022</span>
-            <span class="tag bg-slate-100 text-slate-600">ECG</span>
-            <span class="tag bg-slate-100 text-slate-600">CNN</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Detection of Ventricular Fibrillation from ECG Signal using Hybrid Scalogram-based Convolutional Neural Network</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Faisal Mina, Amit Dutta Roy, Md. Bashir Uddin</span>
-            — <em>1st International Conference on Information and Communication Technology for Development (ICICTD)</em>, Springer, 2022.
+        <!-- C6 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C6]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Fahim Islam Anik, Nazmus Sakib, <strong>Amit Dutta Roy</strong>, Md. Helal An Nahiyan. "Advancing Prosthetic Arm Control: An EMG-Based Grasp Force Estimation Towards Anthropomorphic Movement." <em>2023 26th International Conference on Computer and Information Technology (ICCIT)</em>, IEEE, 2023.
           </p>
-          <div class="flex gap-3 mt-3">
-            <a href="https://doi.org/10.1007/978-981-19-7528-8_38" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
-          </div>
         </div>
 
-      </div>
-    </div>
-
-    <!-- 2021 -->
-    <div id="year-2021" class="mb-12">
-      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-slate-400 text-white px-3 py-1 rounded-lg text-sm">2021</span>
-      </h2>
-      <div class="space-y-4">
-
-        <div class="pub-card" data-type="conf" data-year="2021">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">IEEE ACMI 2021</span>
-            <span class="tag bg-slate-100 text-slate-600">Glioma</span>
-            <span class="tag bg-slate-100 text-slate-600">Segmentation</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Automatic Segmentation and Shape, Texture-based Analysis of Glioma Using Fully Convolutional Network</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Mohammad Badhruddouza Khan, Pranto Soumik Saha, Amit Dutta Roy</span>
-            — <em>ACMI 2021</em>, IEEE.
+        <!-- C5 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C5]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Tasnim Ahmed, Most. Jaytun Nahar, Ayesha Tun Nashrah, Atqia Labiba Asha, <strong>Amit Dutta Roy</strong>. "Synergistic MPC and Temperature Regulator in Phototherapeutic-Incubator: A Mathematical Modeling Approach." <em>2023 6th International Conference on Electrical Information and Communication Technology (EICT)</em>, IEEE, 2023.
+            <a href="https://doi.org/10.1109/EICT61409.2023.10427867" target="_blank" rel="noopener" class="doi-badge">DOI</a>
           </p>
-          <div class="flex gap-3 mt-3">
-            <a href="https://doi.org/10.1109/ACMI53878.2021.9528282" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
-          </div>
         </div>
 
-      </div>
-    </div>
-
-    <!-- 2020 -->
-    <div id="year-2020" class="mb-12">
-      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-slate-400 text-white px-3 py-1 rounded-lg text-sm">2020</span>
-      </h2>
-      <div class="space-y-4">
-
-        <div class="pub-card" data-type="conf" data-year="2020">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">IEEE ICCIT 2020</span>
-            <span class="tag bg-slate-100 text-slate-600">EEG</span>
-            <span class="tag bg-slate-100 text-slate-600">Epilepsy</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Detection of Epileptic Seizures from Wavelet Scalogram of EEG Signal Using Transfer Learning with AlexNet Convolutional Neural Network</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Amit Dutta Roy, Muhammad Muinul Islam</span>
-            — <em>ICCIT 2020</em>, IEEE.
+        <!-- C4 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C4]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Faisal Mina, <strong>Amit Dutta Roy</strong>, Md. Bashir Uddin. "Detection of Ventricular Fibrillation from ECG Signal using Hybrid Scalogram-based Convolutional Neural Network." <em>1st International Conference on Information and Communication Technology for Development (ICICTD)</em>, Springer, 2022.
+            <a href="https://doi.org/10.1007/978-981-19-7528-8_38" target="_blank" rel="noopener" class="doi-badge">DOI</a>
           </p>
-          <div class="flex gap-3 mt-3">
-            <a href="https://doi.org/10.1109/ICCIT51783.2020.9392720" target="_blank" rel="noopener" class="inline-flex items-center gap-1 bg-teal-50 text-primary text-xs font-semibold px-3 py-1 rounded-full hover:bg-teal-100 transition-colors">DOI</a>
-          </div>
         </div>
 
-      </div>
-    </div>
+        <!-- C3 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C3]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Mohammad Badhruddouza Khan, Pranto Soumik Saha, <strong>Amit Dutta Roy</strong>. "Automatic Segmentation and Shape, Texture-based Analysis of Glioma Using Fully Convolutional Network." <em>ACMI 2021</em>, IEEE.
+            <a href="https://doi.org/10.1109/ACMI53878.2021.9528282" target="_blank" rel="noopener" class="doi-badge">DOI</a>
+          </p>
+        </div>
 
-    <!-- 2019 -->
-    <div id="year-2019" class="mb-12">
-      <h2 class="text-xl font-bold text-slate-700 mb-5 flex items-center gap-3">
-        <span class="bg-slate-400 text-white px-3 py-1 rounded-lg text-sm">2019</span>
-      </h2>
-      <div class="space-y-4">
+        <!-- C2 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C2]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            <strong>Amit Dutta Roy</strong>, Muhammad Muinul Islam. "Detection of Epileptic Seizures from Wavelet Scalogram of EEG Signal Using Transfer Learning with AlexNet Convolutional Neural Network." <em>ICCIT 2020</em>, IEEE.
+            <a href="https://doi.org/10.1109/ICCIT51783.2020.9392720" target="_blank" rel="noopener" class="doi-badge">DOI</a>
+          </p>
+        </div>
 
-        <div class="pub-card" data-type="conf" data-year="2019">
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="tag bg-amber-100 text-accent-dark">Conference</span>
-            <span class="tag bg-amber-50 text-accent-dark">IEEE EICT 2019</span>
-            <span class="tag bg-slate-100 text-slate-600">ECG</span>
-            <span class="tag bg-slate-100 text-slate-600">Arrhythmia</span>
-          </div>
-          <h3 class="font-semibold text-slate-800 leading-snug">Automatic Identification of Arrhythmia from ECG Using AlexNet Convolutional Neural Network</h3>
-          <p class="text-slate-500 text-sm mt-1">
-            <span class="font-medium text-slate-700">Fazla Rabbi Mashrur, Amit Dutta Roy, Dabasish Kumar Saha</span>
-            — <em>EICT 2019</em>, IEEE.
+        <!-- C1 -->
+        <div class="py-5 flex gap-4">
+          <span class="pub-label">[C1]</span>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Fazla Rabbi Mashrur, <strong>Amit Dutta Roy</strong>, Dabasish Kumar Saha. "Automatic Identification of Arrhythmia from ECG Using AlexNet Convolutional Neural Network." <em>EICT 2019</em>, IEEE.
           </p>
         </div>
 
@@ -435,34 +289,6 @@
     </div>
   </footer>
 
-  <script>
-    function filterPubs(type) {
-      const cards = document.querySelectorAll('.pub-card');
-      const yearSections = document.querySelectorAll('[id^="year-"]');
-      cards.forEach(card => {
-        let show = false;
-        if (type === 'all') show = true;
-        else if (type === 'journal' || type === 'conf') show = card.dataset.type === type;
-        else show = card.dataset.year === type;
-        card.style.display = show ? '' : 'none';
-      });
-      // hide empty year sections
-      yearSections.forEach(sec => {
-        const visible = sec.querySelectorAll('.pub-card:not([style*="display: none"])');
-        sec.style.display = visible.length ? '' : 'none';
-      });
-      // update button styles
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('bg-primary', 'text-white');
-        b.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-600');
-      });
-      const active = document.getElementById('f-' + type);
-      if (active) {
-        active.classList.add('bg-primary', 'text-white');
-        active.classList.remove('bg-white', 'border', 'border-slate-200', 'text-slate-600');
-      }
-    }
-  </script>
   <script>
     function setTheme(t){
       localStorage.setItem('bnira-theme',t);
