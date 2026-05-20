@@ -71,6 +71,11 @@
     .mobile-nav-link.active{color:#d97706}
     #mobile-menu{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#0d6e6e}
     #mobile-menu.open{max-height:400px}
+    .nav-link{color:#fff!important}
+    .nav-link:hover,.nav-link.active{color:#d97706!important}
+    .btn-primary{color:#fff!important}
+    .btn-outline{color:#fff!important}
+    .btn-outline:hover{color:#0d6e6e!important}
   </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased">
@@ -142,18 +147,17 @@
   <section class="bg-gradient-to-r from-primary-xdark to-primary-dark text-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row gap-10 items-center">
-        <!-- avatar placeholder -->
         <div class="flex-shrink-0">
-          <div class="w-36 h-36 rounded-full bg-teal-600 border-4 border-teal-400 flex items-center justify-center text-5xl font-bold text-white">
-            ADR
-          </div>
+          <img src="assets/img/amit_dutta_roy.jpg" alt="Amit Dutta Roy"
+               class="w-36 h-36 rounded-full object-cover border-4 border-teal-400"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'w-36 h-36 rounded-full bg-teal-600 border-4 border-teal-400 flex items-center justify-center text-5xl font-bold text-white',textContent:'ADR'}))">
         </div>
         <div>
           <p class="text-teal-300 uppercase tracking-widest text-sm font-semibold mb-1">Principal Investigator</p>
           <h2 class="text-3xl font-bold mb-2">Amit Dutta Roy</h2>
           <p class="text-teal-100 text-sm mb-3">Assistant Professor (on leave) · Dept. of Biomedical Engineering, KUET<br>Graduate Fellow · Dept. of Biomedical Engineering, University of Minnesota Twin Cities</p>
           <p class="text-teal-200 leading-relaxed max-w-2xl">
-            Amit Dutta Roy is an Assistant Professor (on leave) at KUET, currently a Graduate Fellow at the University of Minnesota Twin Cities pursuing his PhD. His research interests include neural engineering, neuromodulation, biosignal processing, and deep learning for biomedical applications.
+            Amit Dutta Roy is an Assistant Professor (on leave) at KUET, currently a Graduate Fellow at the Department of Biomedical Engineering, University of Minnesota Twin Cities, pursuing his PhD in Biomedical Engineering (Sep 2025 – Present). His research interests include neural engineering, neuromodulation, biosignal processing, and deep learning for biomedical applications.
           </p>
           <div class="flex gap-4 mt-4">
             <a href="https://scholar.google.com/citations?user=ZpUq_acAAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener" class="text-teal-300 hover:text-white transition-colors">
@@ -207,28 +211,24 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div class="card p-6">
-          <div class="text-3xl mb-4">🧠</div>
           <h3 class="font-bold text-lg text-slate-800 mb-2">Neural Signal Processing</h3>
           <p class="text-slate-500 text-sm leading-relaxed">EEG and ECG analysis for epilepsy detection, arrhythmia classification, and ventricular fibrillation using ML, deep learning, and scalogram-based CNNs.</p>
           <a href="research.html" class="mt-4 inline-block text-primary text-sm font-semibold hover:underline">Read more →</a>
         </div>
 
         <div class="card p-6">
-          <div class="text-3xl mb-4">💡</div>
           <h3 class="font-bold text-lg text-slate-800 mb-2">Bio-Photonics</h3>
           <p class="text-slate-500 text-sm leading-relaxed">PCF-based SPR sensor design and numerical simulation for detection of blood, breast, and adrenal gland cancers.</p>
           <a href="research.html" class="mt-4 inline-block text-primary text-sm font-semibold hover:underline">Read more →</a>
         </div>
 
         <div class="card p-6">
-          <div class="text-3xl mb-4">🤖</div>
           <h3 class="font-bold text-lg text-slate-800 mb-2">Biomedical AI &amp; Imaging</h3>
           <p class="text-slate-500 text-sm leading-relaxed">Deep learning for medical image segmentation (glioma), disease classification, and multimodal diabetes assistance.</p>
           <a href="research.html" class="mt-4 inline-block text-primary text-sm font-semibold hover:underline">Read more →</a>
         </div>
 
         <div class="card p-6">
-          <div class="text-3xl mb-4">👁️</div>
           <h3 class="font-bold text-lg text-slate-800 mb-2">Vision &amp; Rehabilitation</h3>
           <p class="text-slate-500 text-sm leading-relaxed">VR-based therapy for convergence insufficiency and EMG-driven prosthetic arm control for assistive rehabilitation.</p>
           <a href="research.html" class="mt-4 inline-block text-primary text-sm font-semibold hover:underline">Read more →</a>
@@ -253,7 +253,18 @@
     <div class="space-y-4">
 
       <div class="card p-5 flex gap-5 items-start">
-        <div class="flex-shrink-0 bg-primary text-white text-center rounded-lg px-3 py-2 w-14">
+        <div class="flex-shrink-0 bg-primary text-white text-center rounded-lg px-3 py-2 min-w-[90px]">
+          <div class="text-xs font-medium">SEP</div>
+          <div class="text-xl font-bold leading-tight">2025</div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-slate-800">Amit Dutta Roy joins University of Minnesota Twin Cities as Graduate Fellow</h4>
+          <p class="text-slate-500 text-sm mt-1">Amit Dutta Roy joined the Department of Biomedical Engineering, University of Minnesota Twin Cities as a Graduate Fellow, pursuing his PhD in Biomedical Engineering.</p>
+        </div>
+      </div>
+
+      <div class="card p-5 flex gap-5 items-start">
+        <div class="flex-shrink-0 bg-primary text-white text-center rounded-lg px-3 py-2 min-w-[90px]">
           <div class="text-xs font-medium">JUN</div>
           <div class="text-xl font-bold leading-tight">2025</div>
         </div>
@@ -264,7 +275,7 @@
       </div>
 
       <div class="card p-5 flex gap-5 items-start">
-        <div class="flex-shrink-0 bg-accent text-white text-center rounded-lg px-3 py-2 w-14">
+        <div class="flex-shrink-0 bg-accent text-white text-center rounded-lg px-3 py-2 min-w-[90px]">
           <div class="text-xs font-medium">APR</div>
           <div class="text-xl font-bold leading-tight">2025</div>
         </div>
@@ -276,7 +287,7 @@
       </div>
 
       <div class="card p-5 flex gap-5 items-start">
-        <div class="flex-shrink-0 bg-primary text-white text-center rounded-lg px-3 py-2 w-14">
+        <div class="flex-shrink-0 bg-primary text-white text-center rounded-lg px-3 py-2 min-w-[90px]">
           <div class="text-xs font-medium">AUG</div>
           <div class="text-xl font-bold leading-tight">2024</div>
         </div>
@@ -287,7 +298,7 @@
       </div>
 
       <div class="card p-5 flex gap-5 items-start">
-        <div class="flex-shrink-0 bg-primary text-white text-center rounded-lg px-3 py-2 w-14">
+        <div class="flex-shrink-0 bg-primary text-white text-center rounded-lg px-3 py-2 min-w-[90px]">
           <div class="text-xs font-medium">&nbsp;</div>
           <div class="text-xl font-bold leading-tight">2024</div>
         </div>

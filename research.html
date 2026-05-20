@@ -64,6 +64,11 @@
     .mobile-nav-link.active{color:#d97706}
     #mobile-menu{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#0d6e6e}
     #mobile-menu.open{max-height:400px}
+    .nav-link{color:#fff!important}
+    .nav-link:hover,.nav-link.active{color:#d97706!important}
+    .btn-primary{color:#fff!important}
+    .btn-outline{color:#fff!important}
+    .btn-outline:hover{color:#0d6e6e!important}
   </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased">
@@ -133,17 +138,14 @@
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
     <h2 class="text-3xl font-bold text-slate-800 mb-10">Research Areas</h2>
 
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
     <!-- Area 1 -->
-    <div class="card mb-8 overflow-hidden">
+    <div class="card overflow-hidden">
       <div class="border-l-4 border-primary p-6 md:p-8">
-        <div class="flex flex-wrap items-start gap-4 mb-4">
-          <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <span class="text-2xl">🧠</span>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-slate-800">Neural Signal Processing &amp; Epilepsy Detection</h3>
-            <p class="text-primary font-medium text-sm mt-0.5">EEG · ML/DL Pipelines · Noisy Signal Handling · Population-Specific Models</p>
-          </div>
+        <div class="mb-4">
+          <h3 class="text-xl font-bold text-slate-800">Neural Signal Processing &amp; Epilepsy Detection</h3>
+          <p class="text-primary font-medium text-sm mt-0.5">EEG · ML/DL Pipelines · Noisy Signal Handling · Population-Specific Models</p>
         </div>
         <p class="text-slate-600 leading-relaxed mb-4">
           We develop machine learning and deep learning pipelines for epilepsy detection from noisy EEG signals. Research includes population-specific model design, stacking classifier approaches, and robust feature extraction strategies that handle real-world signal degradation.
@@ -158,16 +160,11 @@
     </div>
 
     <!-- Area 2 -->
-    <div class="card mb-8 overflow-hidden">
+    <div class="card overflow-hidden">
       <div class="border-l-4 border-accent p-6 md:p-8">
-        <div class="flex flex-wrap items-start gap-4 mb-4">
-          <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <span class="text-2xl">❤️</span>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-slate-800">Cardiac Signal Analysis</h3>
-            <p class="text-accent-dark font-medium text-sm mt-0.5">ECG · Arrhythmia Detection · Ventricular Fibrillation · CNNs</p>
-          </div>
+        <div class="mb-4">
+          <h3 class="text-xl font-bold text-slate-800">Cardiac Signal Analysis</h3>
+          <p class="text-accent-dark font-medium text-sm mt-0.5">ECG · Arrhythmia Detection · Ventricular Fibrillation · CNNs</p>
         </div>
         <p class="text-slate-600 leading-relaxed mb-4">
           AI-based ECG interpretation for arrhythmia identification and ventricular fibrillation detection. We employ scalogram-based convolutional neural networks and transfer learning to achieve high-accuracy cardiac classification from single- and multi-lead ECG recordings.
@@ -182,16 +179,11 @@
     </div>
 
     <!-- Area 3 -->
-    <div class="card mb-8 overflow-hidden">
+    <div class="card overflow-hidden">
       <div class="border-l-4 border-primary p-6 md:p-8">
-        <div class="flex flex-wrap items-start gap-4 mb-4">
-          <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <span class="text-2xl">💡</span>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-slate-800">Bio-Photonics &amp; Cancer Detection</h3>
-            <p class="text-primary font-medium text-sm mt-0.5">PCF-based SPR Sensors · Numerical Simulation · Cancer Biomarkers</p>
-          </div>
+        <div class="mb-4">
+          <h3 class="text-xl font-bold text-slate-800">Bio-Photonics &amp; Cancer Detection</h3>
+          <p class="text-primary font-medium text-sm mt-0.5">PCF-based SPR Sensors · Numerical Simulation · Cancer Biomarkers</p>
         </div>
         <p class="text-slate-600 leading-relaxed mb-4">
           Design and numerical analysis of photonic crystal fiber (PCF)-based surface plasmon resonance (SPR) sensors for non-invasive cancer detection. Current work covers detection of blood, breast, and adrenal gland cancers through refractive index sensitivity modelling.
@@ -206,16 +198,11 @@
     </div>
 
     <!-- Area 4 -->
-    <div class="card mb-8 overflow-hidden">
+    <div class="card overflow-hidden">
       <div class="border-l-4 border-accent p-6 md:p-8">
-        <div class="flex flex-wrap items-start gap-4 mb-4">
-          <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <span class="text-2xl">🤖</span>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-slate-800">Biomedical AI &amp; Medical Imaging</h3>
-            <p class="text-accent-dark font-medium text-sm mt-0.5">Deep Learning · Glioma Segmentation · Disease Classification</p>
-          </div>
+        <div class="mb-4">
+          <h3 class="text-xl font-bold text-slate-800">Biomedical AI &amp; Medical Imaging</h3>
+          <p class="text-accent-dark font-medium text-sm mt-0.5">Deep Learning · Glioma Segmentation · Disease Classification</p>
         </div>
         <p class="text-slate-600 leading-relaxed mb-4">
           Deep learning models for medical image analysis, including glioma segmentation and multi-class disease classification. Work spans convolutional and transformer architectures applied to MRI and histopathology images, targeting clinical decision support.
@@ -230,16 +217,11 @@
     </div>
 
     <!-- Area 5 -->
-    <div class="card mb-8 overflow-hidden">
+    <div class="card overflow-hidden">
       <div class="border-l-4 border-primary p-6 md:p-8">
-        <div class="flex flex-wrap items-start gap-4 mb-4">
-          <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <span class="text-2xl">🦾</span>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-slate-800">Assistive &amp; Wearable Devices</h3>
-            <p class="text-primary font-medium text-sm mt-0.5">EMG Prosthetics · Diabetes Assistance · Phototherapeutic Systems</p>
-          </div>
+        <div class="mb-4">
+          <h3 class="text-xl font-bold text-slate-800">Assistive &amp; Wearable Devices</h3>
+          <p class="text-primary font-medium text-sm mt-0.5">EMG Prosthetics · Diabetes Assistance · Phototherapeutic Systems</p>
         </div>
         <p class="text-slate-600 leading-relaxed mb-4">
           Development of EMG-based prosthetic control systems, multimodal assistive devices for diabetes management, and smart phototherapeutic incubator systems. Research focuses on translating signal processing and AI into functional, patient-centred assistive technology.
@@ -256,14 +238,9 @@
     <!-- Area 6 -->
     <div class="card overflow-hidden">
       <div class="border-l-4 border-accent p-6 md:p-8">
-        <div class="flex flex-wrap items-start gap-4 mb-4">
-          <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <span class="text-2xl">👁️</span>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-slate-800">Vision &amp; Neuro-Rehabilitation</h3>
-            <p class="text-accent-dark font-medium text-sm mt-0.5">VR Therapy · Convergence Insufficiency · Optometric AI</p>
-          </div>
+        <div class="mb-4">
+          <h3 class="text-xl font-bold text-slate-800">Vision &amp; Neuro-Rehabilitation</h3>
+          <p class="text-accent-dark font-medium text-sm mt-0.5">VR Therapy · Convergence Insufficiency · Optometric AI</p>
         </div>
         <p class="text-slate-600 leading-relaxed mb-4">
           Application of virtual reality-based therapies for vision rehabilitation, with a focus on convergence insufficiency treatment. Research investigates the efficacy of immersive VR environments as a clinical alternative to traditional pencil push-up therapy.
@@ -275,6 +252,8 @@
         </div>
       </div>
     </div>
+
+    </div><!-- end grid -->
   </section>
 
   <!-- TOOLS & METHODS -->
